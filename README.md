@@ -1,6 +1,6 @@
 # art-viz
 
- Framed art photo simulation tool using Blender command line tools & Python
+ Hanging art simulation tool using Blender command line tools & Python. Visualize how your art will look hanging on a wall with photo-realistic, computer-generated lighting.
 
 > This repository is in active development. Check again in the future for future developments.
 
