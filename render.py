@@ -1,5 +1,5 @@
-# Run as: blender -b <filename> -P <this_script> -- <image_path>
-# ex: blender -b .\art-vis.blend -P render.py   -- .\test0001.png 9 12 .01 BLENDER_EEVEE
+# Run as: blender -b <filename> -P <this_script> -- <image_path> <width-inches> <height-inches> <depth-inches> <renderer>
+# ex: blender -b .\art-vis.blend -P render.py   -- <file-with-extension> 9 12 1 CYCLES
 
 import bpy, sys, os
 import pathlib
@@ -27,8 +27,17 @@ if os.path.exists(imagePath):
     
     bpy.context.scene.render.engine = renderer
 
+    if(renderer == "CYCLES"):
+        bpy.context.scene.render.engine = 'CYCLES' 
+        bpy.data.scenes["Scene"].cycles.device='GPU' 
+        bpy.context.scene.cycles.device = 'GPU'
+        # bpy.context.user_preferences.addons['cycles'].preferences.compute_device_type = "OPTIX"
+        # bpy.context.user_preferences.addons['cycles'].preferences.devices[0].use = True
+
     # Set dimensions
     # top = bpy.data.objects["Sizer"].data.bones["Top"]
+    bpy.ops.object.mode_set(mode='POSE')
+
     context = bpy.context
     ob = context.object
     scene = context.scene
