@@ -51,11 +51,11 @@
 
 Start by copy and pasting this before you add custom args:
 
-`blender -b .\art-vis.blend -P render.py   --`
+`blender -b .\art-viz.blend -P render.py   --`
 
 Everything that comes after `--` will be user-defined arguments, parsed in `render.py`.
 
-Separate custom arguments with spaces after the `--` symbol. There should be a space on either side of the `--`.
+Separate custom arguments with spaces after the `--` symbol. There must be a space on either side of the `--`.
 
 ### Image Path
 

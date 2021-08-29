@@ -4,15 +4,20 @@
 import bpy, sys, os
 import pathlib
 
-
+# Args
 argv = sys.argv
+startArgs = argv.index('--') + 1
+argv = argv[startArgs:]
 
-renderer = sys.argv[-1]
-imagePath = sys.argv[-5]
-width = float(sys.argv[-4])
-height = float(sys.argv[-3])
-depth = float(sys.argv[-2])
-
+imagePath = argv[0]
+width = float(argv[1])
+height = float(argv[2])
+depth = float(argv[3])
+renderer = argv[4]
+#if(len(argv) - startArgs > 3):
+frame = argv[5]
+#else:
+ #   frame = ""
 
 if os.path.exists(imagePath):
     # Assume object, material and texture name (and settings) are valid
@@ -43,22 +48,22 @@ if os.path.exists(imagePath):
     scene = context.scene
     bones = ob.pose.bones
 
-    # Covert units from inches to meters
-    # height /= 39.3701
-    # width /= 39.3701
-    # depth /= 39.3701
+    # Activate frame
+    if(len(frame) > 0):
+        frameObject = bpy.data.objects[frame]
+        frameObject.hide_render = False
 
     # Set height
     top = bones['Top']
     bottom = bones['Bottom']
-    top.location = (0, height/2 - 2, 0)
-    bottom.location = (0, height/2 - 2, 0)
+    top.location = (0, height - 2, 0)
+    bottom.location = (0, height - 2, 0)
 
     # Set width
     left = bones['Left']
     right = bones['Right']
-    left.location = (0, width/2 - 2, 0)
-    right.location = (0, width/2 - 2, 0)
+    left.location = (0, width - 2, 0)
+    right.location = (0, width - 2, 0)
 
     # Set Depth
     depthb = bones['Depth']
@@ -74,10 +79,7 @@ if os.path.exists(imagePath):
     # Render still image, automatically write to output path
     bpy.ops.render.render(write_still=True)
 
-    print(width)
-    print(height)
-    print(depth)
-
+    print(frame)
 
 else:
     print("Missing Image:", imagePath)
