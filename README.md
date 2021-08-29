@@ -6,7 +6,7 @@
 
 **Usage:** `blender -b <filename> -P <this_script> -- <image_path> <width-inches> <height-inches> <depth-inches> <renderer>`
 
-**Example:** `blender -b .\art-viz.blend -P render.py  -- .\peaches.jpg 9 12 .1 CYCLES WhiteFloatingFrame
+**Example:** `blender -b .\art-viz.blend -P render.py  -- .\peaches.jpg 9 12 .1 CYCLES WhiteFloatingFrame`
 
 ***Original***
 
