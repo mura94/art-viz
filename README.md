@@ -6,17 +6,17 @@
 
 **Usage:** `blender -b <filename> -P <this_script> -- <image_path> <width-inches> <height-inches> <depth-inches> <renderer>`
 
-**Example:** `blender -b .\art-viz.blend -P render.py  -- apples.png 20 16 .75 CYCLES`
+**Example:** `blender -b .\art-viz.blend -P render.py  -- .\peaches.jpg 9 12 .1 CYCLES WhiteFloatingFrame
 
 ***Original***
 
-<img title="" src="GarlicAndSpinach_v1.png" alt="apples" width="287" data-align="center">
+<img title="" src="garlic.png" alt="apples" width="287" data-align="center">
 
 ***Result***
 
-<img title="" src="GarlicAndSpinach_v1.png_viz.png" alt="apples-output" width="402" data-align="center">
+<img title="" src="garlic_render.png" alt="apples-output" width="402" data-align="center">
 
-*Frames will be added in future updates soon!*
+*More frames will be added in future updates soon!*
 
 ## Dependencies
 
@@ -87,3 +87,15 @@ The depth of the real piece in inches.
 The type of renderer that Blender will use.
 
 Options are `CYCLES`, `BLENDER_EEVEE`, or `BLENDER_WORKBENCH`.
+
+### Frame Type
+
+The frame that will surround the piece.
+
+Current framing options are
+
+- `WhiteFloatingFrame`
+
+- `BlackFloatingframe`
+
+> :exclamation:This list will be added to in the near future for more interesting customization
