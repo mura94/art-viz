@@ -22,6 +22,7 @@
 
 - Blender 2.8+
   - Created using 2.93
+- Blender executable folder **must** be added to PATH to run the `blender` cmd
 - Python 2.7+
   - Created using 3.8.2
 
@@ -37,9 +38,9 @@
 
 - [x] Select renderer via args
 
-- [ ] Design custom frames
+- [x] Design custom frames
 
-- [ ] Select frame type via args
+- [x] Select frame type via args
 
 - [ ] Set wall color via args
 

@@ -3,44 +3,54 @@
 
 import bpy, sys, os
 import pathlib
+import argparse
 
-# Args
+############
+#### argparse
+parser = argparse.ArgumentParser(description='Generate visually realistic renders of paintings or other 2D artwork.')
+parser.add_argument('image', metavar='IMG', type=str, nargs=1, help='The relative path of the original image')
+
+parser.add_argument('width', metavar='WIDTH', type=float, nargs=1, help='The width of the original in inches',default=10)
+parser.add_argument('height', metavar='HEIGHT', type=float, nargs=1,help='The height of the original in inches',default=10)
+parser.add_argument('depth', metavar='DEPTH', type=float, nargs=1, help='The depth of the original in inches', default=1)
+parser.add_argument('renderer', metavar="RENDERER", type=str, nargs=1, help='The desired renderer to use within Blender. ex: CYCLES', default='CYCLES')
+parser.add_argument('frameType', metavar="FRAME", type=str, nargs=1, help='The type of frame to use.')
+
 argv = sys.argv
 startArgs = argv.index('--') + 1
 argv = argv[startArgs:]
+args = parser.parse_args(argv)
+#############
 
-imagePath = argv[0]
-width = float(argv[1])
-height = float(argv[2])
-depth = float(argv[3])
-renderer = argv[4]
-#if(len(argv) - startArgs > 3):
-frame = argv[5]
-#else:
- #   frame = ""
+# Get arg values
+imagePath = args.image[0]
+renderer = args.renderer[0]
+width = args.width[0]
+height = args.height[0]
+depth = args.depth[0]
+renderer = args.renderer[0]
+frame = args.frameType[0]
 
 if os.path.exists(imagePath):
-    # Assume object, material and texture name (and settings) are valid
+    # Assign image to canvas object's material
     canvas = bpy.data.objects['Canvas']
     canvasMat = canvas.material_slots['CanvasMat'].material
-
     canvasMat.use_nodes = True
     bsdf = canvasMat.node_tree.nodes["Principled BSDF"]
     texImage = canvasMat.node_tree.nodes.new('ShaderNodeTexImage')
     texImage.image = bpy.data.images.load(bpy.path.relpath(imagePath))
     canvasMat.node_tree.links.new(bsdf.inputs['Base Color'], texImage.outputs['Color'])
     
+    # Set renderer type based on arg
     bpy.context.scene.render.engine = renderer
 
+    # Setup cycles to use GPU compute (comment out if using CPU compute)
     if(renderer == "CYCLES"):
         bpy.context.scene.render.engine = 'CYCLES' 
         bpy.data.scenes["Scene"].cycles.device='GPU' 
         bpy.context.scene.cycles.device = 'GPU'
-        # bpy.context.user_preferences.addons['cycles'].preferences.compute_device_type = "OPTIX"
-        # bpy.context.user_preferences.addons['cycles'].preferences.devices[0].use = True
 
-    # Set dimensions
-    # top = bpy.data.objects["Sizer"].data.bones["Top"]
+    # Set dimensions using an armature
     bpy.ops.object.mode_set(mode='POSE')
 
     context = bpy.context
@@ -48,8 +58,8 @@ if os.path.exists(imagePath):
     scene = context.scene
     bones = ob.pose.bones
 
-    # Activate frame
-    if(len(frame) > 0):
+    # Activate frame of choice
+    if(len(frame) > 0 & frame != 'None'):
         frameObject = bpy.data.objects[frame]
         frameObject.hide_render = False
 
