@@ -59,7 +59,7 @@ if os.path.exists(imagePath):
     bones = ob.pose.bones
 
     # Activate frame of choice
-    if(len(frame) > 0 & frame != 'None'):
+    if(frame != 'None'):
         frameObject = bpy.data.objects[frame]
         frameObject.hide_render = False
 
