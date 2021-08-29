@@ -6,7 +6,7 @@
 
 **Usage:** `blender -b <filename> -P <this_script> -- <image_path> <width-inches> <height-inches> <depth-inches> <renderer>`
 
-**Example:** `blender -b .\art-vis.blend -P render.py  -- apples.png 20 16 .75 CYCLES`
+**Example:** `blender -b .\art-viz.blend -P render.py  -- apples.png 20 16 .75 CYCLES`
 
 ***Original***
 
