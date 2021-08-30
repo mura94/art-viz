@@ -4,7 +4,24 @@
 
 > This repository is in active development. Check again in the future for future developments.
 
-**Usage:** `blender -b <filename> -P <this_script> -- <image_path> <width-inches> <height-inches> <depth-inches> <renderer> <frameType>`
+- [art-viz](#art-viz)
+  - [Usage](#usage)
+  - [Dependencies](#dependencies)
+  - [Development](#development)
+  - [Args](#args)
+    - [Blender Command Line Args](#blender-command-line-args)
+    - [Image Path](#image-path)
+    - [Width](#width)
+    - [Height](#height)
+    - [Depth](#depth)
+    - [Renderer](#renderer)
+    - [Frame Type](#frame-type)
+  - [Framing Options](#framing-options)
+  - [Tips](#tips)
+
+## Usage
+ 
+ `blender -b <filename> -P <this_script> -- <image_path> <width-inches> <height-inches> <depth-inches> <renderer> <frameType>`
 
 **Example:** `blender -b .\art-viz.blend -P render.py  -- .\garlic.jpg 18 24 1 CYCLES WoodFloatingFrame02`
 
@@ -17,6 +34,8 @@
 ![Result](/assets/garlic_WoodFloatingFrame02.png)
 
 *More frames will be added in future updates soon!*
+
+[:arrow_up: Back to Top](#art-viz)
 
 ## Dependencies
 
@@ -45,6 +64,8 @@
 - [ ] Set wall color via args
 
 - [ ] Activate decor objects via args & json
+
+[:arrow_up: Back to Top](#art-viz)
 
 ## Args
 
@@ -92,6 +113,8 @@ Options are `CYCLES`, `BLENDER_EEVEE`, or `BLENDER_WORKBENCH`.
 
 The frame that will surround the piece.
 
+[:arrow_up: Back to Top](#art-viz)
+
 ## Framing Options
 
 Current `frameType` options are:
@@ -100,44 +123,60 @@ Current `frameType` options are:
 
 ![WhiteFloatingFrame](/assets/garlic_WhiteeFloatingFrame.png)
 
+[:arrow_up: Back to Top](#art-viz)
+
 ---
 
 `BlackFloatingframe`
 
-![WhiteFloatingFrame](/assets/garlic_BlackFloatingFrame.png)
+![BlackFloatingframe](/assets/garlic_BlackFloatingFrame.png)
+
+[:arrow_up: Back to Top](#art-viz)
 
 ---
 
 `WoodFloatingFrame01`
 
-![WhiteFloatingFrame](/assets/garlic_WoodFloatingFrame01.png)
+![WoodFloatingFrame01](/assets/garlic_WoodFloatingFrame01.png)
+
+[:arrow_up: Back to Top](#art-viz)
 
 ---
 
 `WoodFloatingFrame02`
 
-![WhiteFloatingFrame](/assets/garlic_WoodFloatingFrame02.png)
+![WoodFloatingFrame02](/assets/garlic_WoodFloatingFrame02.png)
+
+[:arrow_up: Back to Top](#art-viz)
 
 ---
 
 `WoodFloatingFrame03`
 
-![WhiteFloatingFrame](/assets/garlic_WoodFloatingFrame03.png)
+![WoodFloatingFrame03](/assets/garlic_WoodFloatingFrame03.png)
+
+[:arrow_up: Back to Top](#art-viz)
 
 ---
 
 `WoodFloatingFrame04`
 
-![WhiteFloatingFrame](/assets/garlic_WoodFloatingFrame04.png)
+![WoodFloatingFrame04](/assets/garlic_WoodFloatingFrame04.png)
+
+[:arrow_up: Back to Top](#art-viz)
 
 ---
 
 `WoodFloatingFrame05`
 
-![WhiteFloatingFrame](/assets/garlic_WoodFloatingFrame05.png)
+![WoodFloatingFrame05](/assets/garlic_WoodFloatingFrame05.png)
+
+[:arrow_up: Back to Top](#art-viz)
 
 > :exclamation:This list will be added to in the near future for more interesting customization
 
 ## Tips
 
 - If the result is too small, double the size values (height/width/depth) to make the art appear larger in the final image
+
+[:arrow_up: Back to Top](#art-viz)
