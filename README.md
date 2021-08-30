@@ -20,7 +20,7 @@
   - [Tips](#tips)
 
 ## Usage
- 
+
  `blender -b <filename> -P <this_script> -- <image_path> <width-inches> <height-inches> <depth-inches> <renderer> <frameType>`
 
 **Example:** `blender -b .\art-viz.blend -P render.py  -- .\garlic.jpg 18 24 1 CYCLES WoodFloatingFrame02`
@@ -59,9 +59,17 @@
 
 - [x] Select frame type via args
 
+- [ ] Make certain args optional
+
 - [ ] Set wall color via args
 
 - [ ] Activate decor objects via args & json
+
+- [ ] Control lighting via args or json
+
+- [ ] Arg to save & load certain arg values as default prefs
+
+- [ ] Output resulution arg
 
 [:arrow_up: Back to Top](#art-viz)
 
@@ -117,61 +125,17 @@ The frame that will surround the piece.
 
 Current `frameType` options are:
 
-`WhiteFloatingFrame`
+|   Name   |   Preview   |
+|---|---|
+|`WhiteFloatingFrame`   | <img title="" src="assets/garlic_WhiteFloatingFrame.png" alt="garlic_WhiteFloatingFrame" width="128" data-align="inline">   |
+|`BlackFloatingframe`   | <img title="" src="assets/garlic_BlackFloatingFrame.png" alt="garlic_BlackFloatingFrame" width="128" data-align="inline">   |
+|`WoodFloatingFrame01`  | <img title="" src="assets/garlic_WoodFloatingFrame01.png" alt="garlic_WoodFloatingFrame01" width="128" data-align="inline"> |
+|`WoodFloatingFrame02`  | <img title="" src="assets/garlic_WoodFloatingFrame01.png" alt="garlic_WoodFloatingFrame01" width="128" data-align="inline"> |
+|`WoodFloatingFrame03`  | <img title="" src="assets/garlic_WoodFloatingFrame03.png" alt="garlic_WoodFloatingFrame03" width="128" data-align="inline"> |
+|`WoodFloatingFrame04`  | <img title="" src="assets/garlic_WoodFloatingFrame04.png" alt="garlic_WoodFloatingFrame04" width="128" data-align="inline"> |
+|`WoodFloatingFrame05`  | <img title="" src="assets/garlic_WoodFloatingFrame05.png" alt="garlic_WoodFloatingFrame05" width="128" data-align="inline"> |
 
-![WhiteFloatingFrame](/assets/garlic_WhiteeFloatingFrame.png)
-
-[:arrow_up: Back to Top](#art-viz)
-
----
-
-`BlackFloatingframe`
-
-![BlackFloatingframe](/assets/garlic_BlackFloatingFrame.png)
-
-[:arrow_up: Back to Top](#art-viz)
-
----
-
-`WoodFloatingFrame01`
-
-![WoodFloatingFrame01](/assets/garlic_WoodFloatingFrame01.png)
-
-[:arrow_up: Back to Top](#art-viz)
-
----
-
-`WoodFloatingFrame02`
-
-![WoodFloatingFrame02](/assets/garlic_WoodFloatingFrame02.png)
-
-[:arrow_up: Back to Top](#art-viz)
-
----
-
-`WoodFloatingFrame03`
-
-![WoodFloatingFrame03](/assets/garlic_WoodFloatingFrame03.png)
-
-[:arrow_up: Back to Top](#art-viz)
-
----
-
-`WoodFloatingFrame04`
-
-![WoodFloatingFrame04](/assets/garlic_WoodFloatingFrame04.png)
-
-[:arrow_up: Back to Top](#art-viz)
-
----
-
-`WoodFloatingFrame05`
-
-![WoodFloatingFrame05](/assets/garlic_WoodFloatingFrame05.png)
-
-[:arrow_up: Back to Top](#art-viz)
-
-> :exclamation:This list will be added to in the near future for more interesting customization
+> :exclamation: This list will be updated in the near future as I create more frame models!
 
 ## Tips
 
