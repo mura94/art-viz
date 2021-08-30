@@ -4,7 +4,7 @@
 
 > This repository is in active development. Check again in the future for future developments.
 
-**Usage:** `blender -b <filename> -P <this_script> -- <image_path> <width-inches> <height-inches> <depth-inches> <renderer>`
+**Usage:** `blender -b <filename> -P <this_script> -- <image_path> <width-inches> <height-inches> <depth-inches> <renderer> <frameType>`
 
 **Example:** `blender -b .\art-viz.blend -P render.py  -- .\garlic.jpg 18 24 1 CYCLES WoodFloatingFrame02`
 
@@ -92,20 +92,38 @@ Options are `CYCLES`, `BLENDER_EEVEE`, or `BLENDER_WORKBENCH`.
 
 The frame that will surround the piece.
 
-Current framing options are
+Current framing options are:
 
-- `WhiteFloatingFrame`
+`WhiteFloatingFrame`
 
-- `BlackFloatingframe`
+![WhiteFloatingFrame](C:\Users\blake\Documents\Blender\art-viz\assets\garlic_WhiteeFloatingFrame.png)
 
-- WoodFloatingFrame01
+`BlackFloatingframe`
 
-- WoodFloatingFrame02
+![WhiteFloatingFrame](C:\Users\blake\Documents\Blender\art-viz\assets\garlic_BlackFloatingFrame.png)
 
-- WoodFloatingFrame03
+`WoodFloatingFrame01`
 
-- WoodFloatingFrame04
+![WhiteFloatingFrame](C:\Users\blake\Documents\Blender\art-viz\assets\garlic_WoodFloatingFrame01.png)
 
-- WoodFloatingFrame05
+`WoodFloatingFrame02`
+
+![WhiteFloatingFrame](C:\Users\blake\Documents\Blender\art-viz\assets\garlic_WoodFloatingFrame02.png)
+
+`WoodFloatingFrame03`
+
+![WhiteFloatingFrame](C:\Users\blake\Documents\Blender\art-viz\assets\garlic_WoodFloatingFrame03.png)
+
+`WoodFloatingFrame04`
+
+![WhiteFloatingFrame](C:\Users\blake\Documents\Blender\art-viz\assets\garlic_WoodFloatingFrame04.png)
+
+`WoodFloatingFrame05`
+
+![WhiteFloatingFrame](C:\Users\blake\Documents\Blender\art-viz\assets\garlic_WoodFloatingFrame05.png)
 
 > :exclamation:This list will be added to in the near future for more interesting customization
+
+## Tips
+
+- If the result is too small, double the size values (height/width/depth) to make the art appear larger in the final image
