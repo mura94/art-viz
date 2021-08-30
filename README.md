@@ -10,11 +10,11 @@
 
 ***Original***
 
-<img title="" src="garlic.png" alt="apples" width="287" data-align="center">
+![Original](garlic.png)
 
 ***Result***
 
-<img title="" src="garlic.png_viz.png" alt="apples-output" width="290" data-align="center">
+![Result](/assets/garlic_WoodFloatingFrame02.png)
 
 *More frames will be added in future updates soon!*
 
@@ -96,31 +96,31 @@ Current framing options are:
 
 `WhiteFloatingFrame`
 
-![WhiteFloatingFrame](C:\Users\blake\Documents\Blender\art-viz\assets\garlic_WhiteeFloatingFrame.png)
+![WhiteFloatingFrame](/assets/garlic_WhiteeFloatingFrame.png)
 
 `BlackFloatingframe`
 
-![WhiteFloatingFrame](C:\Users\blake\Documents\Blender\art-viz\assets\garlic_BlackFloatingFrame.png)
+![WhiteFloatingFrame](/assets/garlic_BlackFloatingFrame.png)
 
 `WoodFloatingFrame01`
 
-![WhiteFloatingFrame](C:\Users\blake\Documents\Blender\art-viz\assets\garlic_WoodFloatingFrame01.png)
+![WhiteFloatingFrame](/assets/garlic_WoodFloatingFrame01.png)
 
 `WoodFloatingFrame02`
 
-![WhiteFloatingFrame](C:\Users\blake\Documents\Blender\art-viz\assets\garlic_WoodFloatingFrame02.png)
+![WhiteFloatingFrame](/assets/garlic_WoodFloatingFrame02.png)
 
 `WoodFloatingFrame03`
 
-![WhiteFloatingFrame](C:\Users\blake\Documents\Blender\art-viz\assets\garlic_WoodFloatingFrame03.png)
+![WhiteFloatingFrame](/assets/garlic_WoodFloatingFrame03.png)
 
 `WoodFloatingFrame04`
 
-![WhiteFloatingFrame](C:\Users\blake\Documents\Blender\art-viz\assets\garlic_WoodFloatingFrame04.png)
+![WhiteFloatingFrame](/assets/garlic_WoodFloatingFrame04.png)
 
 `WoodFloatingFrame05`
 
-![WhiteFloatingFrame](C:\Users\blake\Documents\Blender\art-viz\assets\garlic_WoodFloatingFrame05.png)
+![WhiteFloatingFrame](/assets/garlic_WoodFloatingFrame05.png)
 
 > :exclamation:This list will be added to in the near future for more interesting customization
 
