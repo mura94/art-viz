@@ -40,10 +40,8 @@
 ## Dependencies
 
 - Blender 2.8+
-  - Created using 2.93
-- Blender executable folder **must** be added to PATH to run the `blender` cmd
-- Python 2.8+
-  - Created using 3.8.2
+- Local Blender executable folder **must** be added to PATH
+- Python 3.8.2+
 
 ## Development
 
