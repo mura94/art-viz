@@ -92,31 +92,45 @@ Options are `CYCLES`, `BLENDER_EEVEE`, or `BLENDER_WORKBENCH`.
 
 The frame that will surround the piece.
 
-Current framing options are:
+## Framing Options
+
+Current `frameType` options are:
 
 `WhiteFloatingFrame`
 
 ![WhiteFloatingFrame](/assets/garlic_WhiteeFloatingFrame.png)
 
+---
+
 `BlackFloatingframe`
 
 ![WhiteFloatingFrame](/assets/garlic_BlackFloatingFrame.png)
+
+---
 
 `WoodFloatingFrame01`
 
 ![WhiteFloatingFrame](/assets/garlic_WoodFloatingFrame01.png)
 
+---
+
 `WoodFloatingFrame02`
 
 ![WhiteFloatingFrame](/assets/garlic_WoodFloatingFrame02.png)
+
+---
 
 `WoodFloatingFrame03`
 
 ![WhiteFloatingFrame](/assets/garlic_WoodFloatingFrame03.png)
 
+---
+
 `WoodFloatingFrame04`
 
 ![WhiteFloatingFrame](/assets/garlic_WoodFloatingFrame04.png)
+
+---
 
 `WoodFloatingFrame05`
 
