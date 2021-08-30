@@ -51,7 +51,9 @@ if os.path.exists(imagePath):
         bpy.context.scene.cycles.device = 'GPU'
 
     # Set dimensions using an armature
+    bpy.context.view_layer.objects.active = bpy.data.objects['Sizer']
     bpy.ops.object.mode_set(mode='POSE')
+
 
     context = bpy.context
     ob = context.object
