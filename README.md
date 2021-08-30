@@ -6,7 +6,7 @@
 
 **Usage:** `blender -b <filename> -P <this_script> -- <image_path> <width-inches> <height-inches> <depth-inches> <renderer>`
 
-**Example:** `blender -b .\art-viz.blend -P render.py  -- .\peaches.jpg 9 12 .1 CYCLES WhiteFloatingFrame`
+**Example:** `blender -b .\art-viz.blend -P render.py  -- .\garlic.jpg 18 24 1 CYCLES WoodFloatingFrame02`
 
 ***Original***
 
@@ -14,7 +14,7 @@
 
 ***Result***
 
-<img title="" src="garlic_render.png" alt="apples-output" width="402" data-align="center">
+<img title="" src="garlic.png_viz.png" alt="apples-output" width="290" data-align="center">
 
 *More frames will be added in future updates soon!*
 
@@ -23,7 +23,7 @@
 - Blender 2.8+
   - Created using 2.93
 - Blender executable folder **must** be added to PATH to run the `blender` cmd
-- Python 2.7+
+- Python 2.8+
   - Created using 3.8.2
 
 ## Development
@@ -97,5 +97,15 @@ Current framing options are
 - `WhiteFloatingFrame`
 
 - `BlackFloatingframe`
+
+- WoodFloatingFrame01
+
+- WoodFloatingFrame02
+
+- WoodFloatingFrame03
+
+- WoodFloatingFrame04
+
+- WoodFloatingFrame05
 
 > :exclamation:This list will be added to in the near future for more interesting customization
