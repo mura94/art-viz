@@ -8,13 +8,14 @@ import argparse
 ############
 #### argparse
 parser = argparse.ArgumentParser(description='Generate visually realistic renders of paintings or other 2D artwork.')
-parser.add_argument('image', metavar='IMG', type=str, nargs=1, help='The relative path of the original image')
+parser.add_argument('-I', '--image', metavar='IMG', type=str, help='The relative path of the original image')
 
-parser.add_argument('width', metavar='WIDTH', type=float, nargs=1, help='The width of the original in inches',default=10)
-parser.add_argument('height', metavar='HEIGHT', type=float, nargs=1,help='The height of the original in inches',default=10)
-parser.add_argument('depth', metavar='DEPTH', type=float, nargs=1, help='The depth of the original in inches', default=1)
-parser.add_argument('renderer', metavar="RENDERER", type=str, nargs=1, help='The desired renderer to use within Blender. ex: CYCLES', default='CYCLES')
-parser.add_argument('frameType', metavar="FRAME", type=str, nargs=1, help='The type of frame to use.')
+parser.add_argument('-W', '--width', metavar='WIDTH', type=float, help='The width of the original in inches',default=10)
+parser.add_argument('-H', '--height', metavar='HEIGHT', type=float,help='The height of the original in inches',default=10)
+parser.add_argument('-D', '--depth', metavar='DEPTH', type=float, help='The depth of the original in inches', default=1)
+parser.add_argument('-R', '--renderer', metavar="RENDERER", type=str, help='The desired renderer to use within Blender. ex: CYCLES', default='CYCLES')
+parser.add_argument('-FT', '--frameType', metavar="FRAME", type=str, help='The type of frame to use.')
+parser.add_argument('-WC', "--wallColor", type=str, help='The hex value to apply to the wall.', default="E4DED5")
 
 argv = sys.argv
 startArgs = argv.index('--') + 1
@@ -23,13 +24,29 @@ args = parser.parse_args(argv)
 #############
 
 # Get arg values
-imagePath = args.image[0]
-renderer = args.renderer[0]
-width = args.width[0]
-height = args.height[0]
-depth = args.depth[0]
-renderer = args.renderer[0]
-frame = args.frameType[0]
+imagePath = args.image
+renderer = args.renderer
+width = args.width
+height = args.height
+depth = args.depth
+renderer = args.renderer
+frame = args.frameType
+wallColor = args.wallColor
+
+def hex_to_rgb(value):
+    gamma = 2.2
+    value = value.lstrip('#')
+    lv = len(value)
+    fin = list(int(value[i:i + lv // 3], 16) for i in range(0, lv, lv // 3))
+    r = pow(fin[0] / 255, gamma)
+    g = pow(fin[1] / 255, gamma)
+    b = pow(fin[2] / 255, gamma)
+    fin.clear()
+    fin.append(r)
+    fin.append(g)
+    fin.append(b)
+    fin.append(1.0)
+    return tuple(fin)
 
 if os.path.exists(imagePath):
     # Assign image to canvas object's material
@@ -40,8 +57,19 @@ if os.path.exists(imagePath):
     texImage = canvasMat.node_tree.nodes.new('ShaderNodeTexImage')
     texImage.image = bpy.data.images.load(bpy.path.relpath(imagePath))
     canvasMat.node_tree.links.new(bsdf.inputs['Base Color'], texImage.outputs['Color'])
-    
-    # Set renderer type based on arg
+
+    print(wallColor)
+    wall = bpy.data.objects['Wall']
+    wallMat = wall.material_slots['Wall'].material
+    wallMat.use_nodes = True
+    principled_bsdf = wallMat.node_tree.nodes['Principled BSDF']
+    rgb = hex_to_rgb(wallColor)
+    if principled_bsdf is not None:
+        principled_bsdf.inputs[0].default_value = (rgb[0], rgb[1], rgb[2], 1)
+
+    #(0.024158, 0.026241, 0.05448, 1)
+
+    # Set renderer type  based on arg
     bpy.context.scene.render.engine = renderer
 
     # Setup cycles to use GPU compute (comment out if using CPU compute)
@@ -92,6 +120,7 @@ if os.path.exists(imagePath):
     bpy.ops.render.render(write_still=True)
 
     print(frame)
+    print(wallColor)
 
 else:
     print("Missing Image:", imagePath)

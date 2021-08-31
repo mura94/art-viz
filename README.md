@@ -17,17 +17,18 @@
     - [Depth](#depth)
     - [Renderer](#renderer)
     - [Frame Type](#frame-type)
-  - [Framing Options](#framing-options)
+      - [Frame Options](#frame-options)
+    - [Wall Color](#wall-color)
   - [Tips](#tips)
 
 ## Usage
 
- `blender -b <filename> -P <this_script> -- <image_path> <width-inches> <height-inches> <depth-inches> <renderer> <frameType>`
+ `blender -b <filename> -P <this_script> -- [--image or -I] <image-path> [--width or -W] <width-inches> [--height or -H] <height-inches> [--depth or -D] <depth-inches> [--renderer or -R] <renderer> [--frameType or -FT] <frame-type> [--wallColor or -WC] <wall-color-hex>`
 
 ### Example
 
 ```markdown
-blender -b .\art-viz.blend -P render.py  -- .\garlic.jpg 18 24 1 CYCLES WoodFloatingFrame02
+blender -b .\art-viz.blend -P render.py -- -I .\garlic.png -W 24 -H 18 -D .5 -R  CYCLES -FT BlackFloatingFrame -WC E4DED5
 ```
 
 |Input |Output       |
@@ -96,35 +97,44 @@ This should be an image that exists in the root folder of this repository. Examp
 
 ### Width
 
-ex: `20`
+ex:`--width 20` or `-W 20` 
 
 The width of the real piece in inches.
 
 ### Height
 
-ex: `16`
+ex: `--height 16` or `-H 16`
 
 The height of the real piece in inches.
 
 ### Depth
 
-ex: `.75`
+ex: `--depth .75` or `-D .75`
 
 The depth of the real piece in inches.
 
 ### Renderer
 
+ex: `--renderer CYCLES` or `-R CYCLES`
+
 The type of renderer that Blender will use.
 
-Options are `CYCLES`, `BLENDER_EEVEE`, or `BLENDER_WORKBENCH`.
+|Renderer         |Arg                |
+|---              |---                |
+|Cycles (default) |`CYCLES`           |
+|Eevee            |`BLENDER_EEVEE`    |
+|Workbench        |`BLENDER_WORKBENCH`|
+
 
 ### Frame Type
+
+ex: `--frameType WhiteFloatingFrame` or `-FT WhiteFloatingFrame`
 
 The frame that will surround the piece.
 
 [:arrow_up: Back to Top](#art-viz)
 
-## Framing Options
+#### Frame Options
 
 Current `frameType` options are:
 
@@ -139,6 +149,38 @@ Current `frameType` options are:
 |`WoodFloatingFrame05`  | <img title="" src="assets/garlic_WoodFloatingFrame05.png" alt="garlic_WoodFloatingFrame05" width="128" data-align="inline"> |
 
 > :exclamation: This list will be updated in the near future as I create more frame models!
+
+### Wall Color
+
+ex: `--wallColor E4DED5` or `-WC E4DED5`
+
+Set the hex color of the wall.
+
+Optional. Defaults to E4DED5 - a warm off-white - if not set.
+
+Some colors you can try from [Benjamin Moore](https://convertingcolors.com/list/benjamin-moore.html)
+
+|Color Name       |Hex      |Tint       |
+|---              |---      |---        |
+|Deep Sea         |`002831` |Blue       |
+|Dark Navy        |`2B2D42` |Blue       |
+|Cool Grey        |`8D99AE` |Grey       |
+|Anti-Flash White |`EDF2F4` |White      |
+|Terra            |`DEBFA0` |Green/Brown|
+|Fiji             |`4F8093` |Blue       |
+|Caponata         |`463234` |Red        |
+|Salmon           |`F29479` |Pink       |
+|Herb             |`63774A` |Green      |
+|Mint             |`D5DFCC` |Green      |
+|Vintage          |`575E50` |Green      |
+|Deep Red         |`310500` |Red        |
+|Dirty Grey       |`545041` |Brown      |
+|Strong Blue      |`202B54` |Blue       |
+|Honeydew         |`C0E1B9` |Green      |
+|Sioux            |`80968F` |Blue       |
+|Deep             |`265557` |Blue       |
+|Lazy             |`5F90B7` |Blue       |
+|Stunning         |`424B63` |Blue       |
 
 ## Tips
 
