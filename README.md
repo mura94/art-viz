@@ -61,9 +61,9 @@ blender -b .\art-viz.blend -P render.py -- -I .\garlic.png -W 24 -H 18 -D .5 -R 
 
 - [x] Select frame type via args
 
-- [ ] Make certain args optional
+- [x] Make certain args optional
 
-- [ ] Set wall color via args
+- [x] Set wall color via args
 
 - [ ] Activate decor objects via args & json
 
