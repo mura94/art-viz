@@ -147,6 +147,11 @@ Current `frameType` options are:
 |`WoodFloatingFrame03`  | <img title="" src="assets/garlic_WoodFloatingFrame03.png" alt="garlic_WoodFloatingFrame03" width="256" data-align="inline"> |
 |`WoodFloatingFrame04`  | <img title="" src="assets/garlic_WoodFloatingFrame04.png" alt="garlic_WoodFloatingFrame04" width="256" data-align="inline"> |
 |`WoodFloatingFrame05`  | <img title="" src="assets/garlic_WoodFloatingFrame05.png" alt="garlic_WoodFloatingFrame05" width="256" data-align="inline"> |
+|`MetalFloatingFrameSilver`  | <img title="" src="assets/garlic_MetalFloatingFrameSilver.png" alt="garlic_MetalFloatingFrameSilver" width="256" data-align="inline"> |
+|`MetalFloatingFrameGold`  | <img title="" src="assets/garlic_MetalFloatingFrameGold.png" alt="garlic_MetalFloatingFrameGold" width="256" data-align="inline"> |
+|`MetalFloatingFrameBlack`  | <img title="" src="assets/garlic_MetalFloatingFrameBlack.png" alt="garlic_MetalFloatingFrameBlack" width="256" data-align="inline"> |
+
+
 
 > :exclamation: This list will be updated in the near future as I create more frame models!
 
