@@ -140,13 +140,13 @@ Current `frameType` options are:
 
 |   Name   |   Preview   |
 |---|---|
-|`WhiteFloatingFrame`   | <img title="" src="assets/garlic_WhiteFloatingFrame.png" alt="garlic_WhiteFloatingFrame" width="128" data-align="inline">   |
-|`BlackFloatingframe`   | <img title="" src="assets/garlic_BlackFloatingFrame.png" alt="garlic_BlackFloatingFrame" width="128" data-align="inline">   |
-|`WoodFloatingFrame01`  | <img title="" src="assets/garlic_WoodFloatingFrame01.png" alt="garlic_WoodFloatingFrame01" width="128" data-align="inline"> |
-|`WoodFloatingFrame02`  | <img title="" src="assets/garlic_WoodFloatingFrame02.png" alt="garlic_WoodFloatingFrame02" width="128" data-align="inline"> |
-|`WoodFloatingFrame03`  | <img title="" src="assets/garlic_WoodFloatingFrame03.png" alt="garlic_WoodFloatingFrame03" width="128" data-align="inline"> |
-|`WoodFloatingFrame04`  | <img title="" src="assets/garlic_WoodFloatingFrame04.png" alt="garlic_WoodFloatingFrame04" width="128" data-align="inline"> |
-|`WoodFloatingFrame05`  | <img title="" src="assets/garlic_WoodFloatingFrame05.png" alt="garlic_WoodFloatingFrame05" width="128" data-align="inline"> |
+|`WhiteFloatingFrame`   | <img title="" src="assets/garlic_WhiteFloatingFrame.png" alt="garlic_WhiteFloatingFrame" width="256" data-align="inline">   |
+|`BlackFloatingframe`   | <img title="" src="assets/garlic_BlackFloatingFrame.png" alt="garlic_BlackFloatingFrame" width="256" data-align="inline">   |
+|`WoodFloatingFrame01`  | <img title="" src="assets/garlic_WoodFloatingFrame01.png" alt="garlic_WoodFloatingFrame01" width="256" data-align="inline"> |
+|`WoodFloatingFrame02`  | <img title="" src="assets/garlic_WoodFloatingFrame02.png" alt="garlic_WoodFloatingFrame02" width="256" data-align="inline"> |
+|`WoodFloatingFrame03`  | <img title="" src="assets/garlic_WoodFloatingFrame03.png" alt="garlic_WoodFloatingFrame03" width="256" data-align="inline"> |
+|`WoodFloatingFrame04`  | <img title="" src="assets/garlic_WoodFloatingFrame04.png" alt="garlic_WoodFloatingFrame04" width="256" data-align="inline"> |
+|`WoodFloatingFrame05`  | <img title="" src="assets/garlic_WoodFloatingFrame05.png" alt="garlic_WoodFloatingFrame05" width="256" data-align="inline"> |
 
 > :exclamation: This list will be updated in the near future as I create more frame models!
 
