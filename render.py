@@ -93,6 +93,10 @@ if os.path.exists(imagePath):
     if(frame != 'None'):
         frameObject = bpy.data.objects[frame]
         frameObject.hide_render = False
+        
+    if("Matted" in frame):
+        matObject = bpy.data.objects["Mat"]
+        matObject.hide_render = False
 
     # Set height
     top = bones['Top']
