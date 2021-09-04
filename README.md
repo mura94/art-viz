@@ -71,7 +71,7 @@ blender -b .\art-viz.blend -P render.py -- -I .\garlic.png -W 24 -H 18 -D .5 -R 
 
 - [ ] Arg to save & load certain arg values as default prefs
 
-- [ ] Output resulution arg
+- [ ] Output resolution arg
 
 [:arrow_up: Back to Top](#art-viz)
 
