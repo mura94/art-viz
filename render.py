@@ -15,6 +15,7 @@ parser.add_argument('-D', '--depth', metavar='DEPTH', type=float, help='The dept
 parser.add_argument('-R', '--renderer', metavar="RENDERER", type=str, help='The desired renderer to use within Blender. ex: CYCLES', default='CYCLES')
 parser.add_argument('-FT', '--frameType', metavar="FRAME", type=str, help='The type of frame to use.')
 parser.add_argument('-WC', "--wallColor", type=str, help='The hex value to apply to the wall.', default="E4DED5")
+parser.add_argument('-O', "--output", type=str, help='The output file name (with extension)', default="render-output_0000.png")
 
 argv = sys.argv
 startArgs = argv.index('--') + 1
@@ -31,6 +32,7 @@ depth = args.depth
 renderer = args.renderer
 frame = args.frameType
 wallColor = args.wallColor
+outputName = args.output
 
 def hex_to_rgb(value):
     gamma = 2.2
@@ -113,7 +115,7 @@ if os.path.exists(imagePath):
     path += '/'
     
 
-    bpy.context.scene.render.filepath = path + imagePath + '_viz'
+    bpy.context.scene.render.filepath = path + outputName
     
     # Render still image, automatically write to output path
     bpy.ops.render.render(write_still=True)

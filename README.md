@@ -19,16 +19,18 @@
     - [Frame Type](#frame-type)
       - [Frame Options](#frame-options)
     - [Wall Color](#wall-color)
+    - [Output](#output)
+  - [Qt Interface](#qt-interface)
   - [Tips](#tips)
 
 ## Usage
 
- `blender -b <filename> -P <this_script> -- [--image or -I] <image-path> [--width or -W] <width-inches> [--height or -H] <height-inches> [--depth or -D] <depth-inches> [--renderer or -R] <renderer> [--frameType or -FT] <frame-type> [--wallColor or -WC] <wall-color-hex>`
+ `blender -b <filename> -P <this_script> -- [--image or -I] <image-path> [--width or -W] <width-inches> [--height or -H] <height-inches> [--depth or -D] <depth-inches> [--renderer or -R] <renderer> [--frameType or -FT] <frame-type> [--wallColor or -WC] <wall-color-hex> --output <output-file-name>`
 
 ### Example
 
-```markdown
-blender -b .\art-viz.blend -P render.py -- -I .\garlic.png -W 24 -H 18 -D .5 -R  CYCLES -FT BlackFloatingFrame -WC E4DED5
+```bash
+blender -b art-viz.blend -P render.py -- -I garlic.png -W 24 -H 18 -D .5 -R  CYCLES -FT BlackFloatingFrame -WC E4DED5 --output garlic_rendered.png
 ```
 
 |Input |Output       |
@@ -44,6 +46,9 @@ blender -b .\art-viz.blend -P render.py -- -I .\garlic.png -W 24 -H 18 -D .5 -R 
 - Blender 2.8+
 - Local Blender executable folder **must** be added to PATH
 - Python 3.8.2+
+- PySide6
+  - Only required if you want to use the optional args input interface
+  - Install with `pip install pyside6`
 
 ## Development
 
@@ -91,7 +96,7 @@ Separate custom arguments with spaces after the `--` symbol. There must be a spa
 
 ### Image Path
 
-ex: `apples.png`
+ex: `garlic.png`
 
 This should be an image that exists in the root folder of this repository. Example use case could be a raw, cropped picture of a finished piece. Include the file extension in the name.
 
@@ -163,7 +168,7 @@ Set the hex color of the wall.
 
 Optional. Defaults to E4DED5 - a warm off-white - if not set.
 
-Some colors you can try from [Benjamin Moore](https://convertingcolors.com/list/benjamin-moore.html)
+Some colors you can try from [Benjamin Moore](https://convertingcolors.com/list/benjamin-moore.html) or [ColorrHunt.co](https://colorhunt.co/)
 
 |Color Name       |Hex      |Tint       |
 |---              |---      |---        |
@@ -187,8 +192,19 @@ Some colors you can try from [Benjamin Moore](https://convertingcolors.com/list/
 |Lazy             |`5F90B7` |Blue       |
 |Stunning         |`424B63` |Blue       |
 
+### Output
+
+ex: `--output garlic_rendered.png`
+
+The desired name of the final render. Writes to the relative directory.
+
+## Qt Interface
+
+For convenience, I've added a script that will display a user interface for faster argument input and editing. If you would like, you can run the script `RenderArgsQt.py`. PySide6 **must** be installed (you can install via `pip install pyside6`).
+
 ## Tips
 
 - If the result is too small, double the size values (height/width/depth) to make the art appear larger in the final image
+- When testing out new wall colors, speed up render times using `BLENDER_EEVEE` instead of the longer (but better quality) `CYCLES`
 
 [:arrow_up: Back to Top](#art-viz)
