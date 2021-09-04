@@ -1,5 +1,4 @@
-# Run as: blender -b <filename> -P <this_script> -- <image_path> <width-inches> <height-inches> <depth-inches> <renderer>
-# ex: blender -b .\art-vis.blend -P render.py   -- <file-with-extension> 9 12 1 CYCLES
+# ex: blender -b .\art-viz.blend -P render.py -- -I .\garlic.png -W 24 -H 18 -D .5 -R  CYCLES -FT BlackFloatingFrame -WC E4DED5
 
 import bpy, sys, os
 import pathlib
