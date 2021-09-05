@@ -32,12 +32,12 @@
 ### Example
 
 ```bash
-blender -b art-viz.blend -P render.py -- -I garlic.png -W 24 -H 18 -D .5 -R  CYCLES -FT BlackFloatingFrame -WC E4DED5 --output garlic_rendered.png
+blender -b art-viz.blend -P render.py -- -I peaches.png -W 24 -H 18 -D .5 -R  CYCLES -FT BlackFloatingFrame -WC E4DED5 --output peaches_rendered.png
 ```
 
 |Input |Output       |
 |---      |---          |
-|<img title="" src="garlic.png" alt="garlic" width="256" data-align="inline">|<img title="" src="assets/full-frames/garlic_WoodFloatingFrame02.png" alt="garlic_WoodFloatingFrame02" width="256" data-align="inline">|
+|<img title="" src="peaches.png" alt="peaches" height="256" data-align="inline"> | <img title="" src="peaches_output.png" alt="peaches_output" height="256" data-align="inline">|
 
 *More frames will be added in future updates soon!*
 
@@ -102,7 +102,7 @@ Separate custom arguments with spaces after the `--` symbol. There must be a spa
 
 ### Image Path
 
-ex: `garlic.png`
+ex: `peaches.png`
 
 This should be an image that exists in the root folder of this repository. Example use case could be a raw, cropped picture of a finished piece. Include the file extension in the name.
 
@@ -151,26 +151,26 @@ Current `frameType` options are:
 
 |   Name   |   Preview   |
 |---|---|
-|`WhiteFloatingFrame`       | <img title="" src="assets/frames/WhiteFloatingFrame.png" alt="garlic_WhiteFloatingFrame" width="128" data-align="inline">                     |
-|`BlackFloatingframe`       | <img title="" src="assets/frames/BlackFloatingFrame.png" alt="garlic_BlackFloatingFrame" width="128" data-align="inline">                     |
-|`WoodFloatingFrame01`      | <img title="" src="assets/frames/WoodFloatingFrame01.png" alt="garlic_WoodFloatingFrame01" width="128" data-align="inline">                   |
-|`WoodFloatingFrame02`      | <img title="" src="assets/frames/WoodFloatingFrame02.png" alt="garlic_WoodFloatingFrame02" width="128" data-align="inline">                   |
-|`WoodFloatingFrame03`      | <img title="" src="assets/frames/WoodFloatingFrame03.png" alt="garlic_WoodFloatingFrame03" width="128" data-align="inline">                   |
-|`WoodFloatingFrame04`      | <img title="" src="assets/frames/WoodFloatingFrame04.png" alt="garlic_WoodFloatingFrame04" width="128" data-align="inline">                   |
-|`WoodFloatingFrame05`      | <img title="" src="assets/frames/WoodFloatingFrame05.png" alt="garlic_WoodFloatingFrame05" width="128" data-align="inline">                   |
-|`MetalFloatingFrameSilver` | <img title="" src="assets/frames/MetalFloatingFrameSilver.png" alt="garlic_MetalFloatingFrameSilver" width="128" data-align="inline">         |
-|`MetalFloatingFrameGold`   | <img title="" src="assets/frames/MetalFloatingFrameGold.png" alt="garlic_MetalFloatingFrameGold" width="128" data-align="inline">             |
-|`MetalFloatingFrameBlack`  | <img title="" src="assets/frames/MetalFloatingFrameBlack.png" alt="garlic_MetalFloatingFrameBlack" width="128" data-align="inline">           |
-|`OrnamentalFrame01`        | <img title="" src = "assets/frames/OrnamentalFrame01.png" alt= "garlic_OrnamentalFrame01" width="128" data-align="inline">                    |
-|`VeronaNarrowFrameBlack`   | <img title="" src = "assets/frames/VeronaNarrowFrameBlack.png" alt= "garlic_VeronaFrameMattedBlack" width="128" data-align="inline">          |
-|`VeronaFrameMattedBlack`   | <img title="" src = "assets/frames/VeronaFrameMattedBlack.png" alt= "garlic_VeronaFrameMattedBlack" width="128" data-align="inline">          |
-|`VeronaFrameMattedCherry`   | <img title="" src = "assets/frames/VeronaFrameMattedCherry.png" alt= "garlic_VeronaFrameMattedCherry" width="128" data-align="inline">       |
-|`VeronaFrameMattedEspresso`   | <img title="" src = "assets/frames/VeronaFrameMattedEspresso.png" alt= "garlic_VeronaFrameMattedEspresso" width="128" data-align="inline"> |
-|`VeronaFrameMattedWalnut`   | <img title="" src = "assets/frames/VeronaFrameMattedWalnut.png" alt= "garlic_VeronaFrameMattedWalnut" width="128" data-align="inline">       |
-|`VeronaFrameMattedMaple`   | <img title="" src = "assets/frames/VeronaFrameMattedMaple.png" alt= "garlic_VeronaFrameMattedMaple" width="128" data-align="inline">          |
-|`VeronaFrameMattedWashedBlack`   | <img title="" src = "assets/frames/VeronaFrameMattedWashedBlack.png" alt= "garlic_VeronaFrameMattedWashedBlack" width="128" data-align="inline"> |
-|`VeronaFrameMattedWashedWhite`   | <img title="" src = "assets/frames/VeronaFrameMattedWashedWhite.png" alt= "garlic_VeronaFrameMattedWashedWhite" width="128" data-align="inline"> |
-|`VeronaFrameMattedRoughGrey`   | <img title="" src = "assets/frames/VeronaFrameMattedRoughGrey.png" alt= "garlic_VeronaFrameMattedRoughGrey" width="128" data-align="inline"> |
+|`WhiteFloatingFrame`       | <img title="" src="assets/frames/WhiteFloatingFrame.png" alt="WhiteFloatingFrame" width="128" data-align="inline">                     |
+|`BlackFloatingframe`       | <img title="" src="assets/frames/BlackFloatingFrame.png" alt="BlackFloatingFrame" width="128" data-align="inline">                     |
+|`WoodFloatingFrame01`      | <img title="" src="assets/frames/WoodFloatingFrame01.png" alt="WoodFloatingFrame01" width="128" data-align="inline">                   |
+|`WoodFloatingFrame02`      | <img title="" src="assets/frames/WoodFloatingFrame02.png" alt="WoodFloatingFrame02" width="128" data-align="inline">                   |
+|`WoodFloatingFrame03`      | <img title="" src="assets/frames/WoodFloatingFrame03.png" alt="WoodFloatingFrame03" width="128" data-align="inline">                   |
+|`WoodFloatingFrame04`      | <img title="" src="assets/frames/WoodFloatingFrame04.png" alt="WoodFloatingFrame04" width="128" data-align="inline">                   |
+|`WoodFloatingFrame05`      | <img title="" src="assets/frames/WoodFloatingFrame05.png" alt="WoodFloatingFrame05" width="128" data-align="inline">                   |
+|`MetalFloatingFrameSilver` | <img title="" src="assets/frames/MetalFloatingFrameSilver.png" alt="MetalFloatingFrameSilver" width="128" data-align="inline">         |
+|`MetalFloatingFrameGold`   | <img title="" src="assets/frames/MetalFloatingFrameGold.png" alt="MetalFloatingFrameGold" width="128" data-align="inline">             |
+|`MetalFloatingFrameBlack`  | <img title="" src="assets/frames/MetalFloatingFrameBlack.png" alt="MetalFloatingFrameBlack" width="128" data-align="inline">           |
+|`OrnamentalFrame01`        | <img title="" src = "assets/frames/OrnamentalFrame01.png" alt= "OrnamentalFrame01" width="128" data-align="inline">                    |
+|`VeronaNarrowFrameBlack`   | <img title="" src = "assets/frames/VeronaNarrowFrameBlack.png" alt= "VeronaFrameMattedBlack" width="128" data-align="inline">          |
+|`VeronaFrameMattedBlack`   | <img title="" src = "assets/frames/VeronaFrameMattedBlack.png" alt= "VeronaFrameMattedBlack" width="128" data-align="inline">          |
+|`VeronaFrameMattedCherry`   | <img title="" src = "assets/frames/VeronaFrameMattedCherry.png" alt= "VeronaFrameMattedCherry" width="128" data-align="inline">       |
+|`VeronaFrameMattedEspresso`   | <img title="" src = "assets/frames/VeronaFrameMattedEspresso.png" alt= "VeronaFrameMattedEspresso" width="128" data-align="inline"> |
+|`VeronaFrameMattedWalnut`   | <img title="" src = "assets/frames/VeronaFrameMattedWalnut.png" alt= "VeronaFrameMattedWalnut" width="128" data-align="inline">       |
+|`VeronaFrameMattedMaple`   | <img title="" src = "assets/frames/VeronaFrameMattedMaple.png" alt= "VeronaFrameMattedMaple" width="128" data-align="inline">          |
+|`VeronaFrameMattedWashedBlack`   | <img title="" src = "assets/frames/VeronaFrameMattedWashedBlack.png" alt= "VeronaFrameMattedWashedBlack" width="128" data-align="inline"> |
+|`VeronaFrameMattedWashedWhite`   | <img title="" src = "assets/frames/VeronaFrameMattedWashedWhite.png" alt= "VeronaFrameMattedWashedWhite" width="128" data-align="inline"> |
+|`VeronaFrameMattedRoughGrey`   | <img title="" src = "assets/frames/VeronaFrameMattedRoughGrey.png" alt= "VeronaFrameMattedRoughGrey" width="128" data-align="inline"> |
 
 
 > :exclamation: This list will be updated in the near future as I create more frame models!
@@ -209,7 +209,7 @@ Some colors you can try from [Benjamin Moore](https://convertingcolors.com/list/
 
 ### Output
 
-ex: `--output garlic_rendered.png` or `-O garlic_rendered.png`
+ex: `--output peaches_rendered.png` or `-O peaches_rendered.png`
 
 The desired name of the final render. Writes to the relative directory.
 

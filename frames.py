@@ -26,6 +26,19 @@ def getFrameList():
 
     l.append('- - - Ornamental Frames - - -')
     l.append('OrnamentalFrame01')
+
+    l.append('- - - Classic Frames - - -')
+    l.append('ClassicFrameMattedBlack')
+    l.append('ClassicFrameMattedCherry')
+    l.append('ClassicFrameMattedEspresso')
+    l.append('ClassicFrameMattedMaple')
+    l.append('ClassicFrameMattedWalnut')
+    l.append('ClassicFrameMattedWashedWhite')
+    l.append('ClassicFrameMattedWashedBlack')
+    l.append('ClassicFrameMattedMetalBlack')
+    l.append('ClassicFrameMattedMetalSilver')
+    l.append('ClassicFrameMattedMetalGold')
+
     return l
 
 def getRenderersList():
