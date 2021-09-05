@@ -1,15 +1,15 @@
 {
     "lastUsed": {
         "depth": ".2",
-        "frameType": "VeronaFrameMattedEspresso",
+        "frameType": "OrnamentalFrame01",
         "height": "12",
-        "image": "peaches.png",
-        "openWhenFinished": false,
-        "output": "render-output.png",
-        "outputHeight": "1024",
-        "outputWidth": "1024",
+        "image": "garlic.png",
+        "openWhenFinished": true,
+        "output": "assets/frames/OrnamentalFrame01.png",
+        "outputHeight": "512",
+        "outputWidth": "512",
         "renderer": "CYCLES",
-        "wallColor": "C0E1B9",
+        "wallColor": "E4DED5",
         "width": "9"
     },
     "savedProfiles": [
