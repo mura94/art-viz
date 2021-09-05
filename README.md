@@ -162,6 +162,7 @@ Current `frameType` options are:
 |`MetalFloatingFrameGold`   | <img title="" src="assets/frames/MetalFloatingFrameGold.png" alt="garlic_MetalFloatingFrameGold" width="128" data-align="inline">             |
 |`MetalFloatingFrameBlack`  | <img title="" src="assets/frames/MetalFloatingFrameBlack.png" alt="garlic_MetalFloatingFrameBlack" width="128" data-align="inline">           |
 |`OrnamentalFrame01`        | <img title="" src = "assets/frames/OrnamentalFrame01.png" alt= "garlic_OrnamentalFrame01" width="128" data-align="inline">                    |
+|`VeronaNarrowFrameBlack`   | <img title="" src = "assets/frames/VeronaNarrowFrameBlack.png" alt= "garlic_VeronaFrameMattedBlack" width="128" data-align="inline">          |
 |`VeronaFrameMattedBlack`   | <img title="" src = "assets/frames/VeronaFrameMattedBlack.png" alt= "garlic_VeronaFrameMattedBlack" width="128" data-align="inline">          |
 |`VeronaFrameMattedCherry`   | <img title="" src = "assets/frames/VeronaFrameMattedCherry.png" alt= "garlic_VeronaFrameMattedCherry" width="128" data-align="inline">       |
 |`VeronaFrameMattedEspresso`   | <img title="" src = "assets/frames/VeronaFrameMattedEspresso.png" alt= "garlic_VeronaFrameMattedEspresso" width="128" data-align="inline"> |
