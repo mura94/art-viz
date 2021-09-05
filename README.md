@@ -20,6 +20,8 @@
       - [Frame Options](#frame-options)
     - [Wall Color](#wall-color)
     - [Output](#output)
+    - [Output Width](#output-width)
+    - [Output Height](#output-height)
   - [Qt Interface](#qt-interface)
   - [Tips](#tips)
 
@@ -70,13 +72,17 @@ blender -b art-viz.blend -P render.py -- -I garlic.png -W 24 -H 18 -D .5 -R  CYC
 
 - [x] Set wall color via args
 
-- [ ] Activate decor objects via args & json
+- [x] Output resulution arg
 
-- [ ] Control lighting via args or json
+- [x] Qt interface alternative
+
+- [x] Store and load last used Qt values for the next Qt instance
 
 - [ ] Arg to save & load certain arg values as default prefs
 
-- [ ] Output resulution arg
+- [ ] Activate decor objects via args & json
+
+- [ ] Control lighting via args or json
 
 [:arrow_up: Back to Top](#art-viz)
 
@@ -202,9 +208,25 @@ Some colors you can try from [Benjamin Moore](https://convertingcolors.com/list/
 
 ### Output
 
-ex: `--output garlic_rendered.png`
+ex: `--output garlic_rendered.png` or `-O garlic_rendered.png`
 
 The desired name of the final render. Writes to the relative directory.
+
+### Output Width
+
+ex: `--outputWidth 1024` or `-OW 1024`
+
+The desired resolution width of the final rendered image.
+
+Optional. Defaults to 1024.
+
+### Output Height
+
+ex: `--outputHeight 1024` or `-OH 1024`
+
+The desired resolution height of the final rendered image.
+
+Optional. Defaults to 1024.
 
 ## Qt Interface
 

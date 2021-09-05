@@ -1,16 +1,16 @@
 {
     "lastUsed": {
-        "depth": ".15",
-        "frameType": "VeronaFrameMattedBlack",
-        "height": "9.5",
-        "image": "ship.jpg",
+        "depth": ".5",
+        "frameType": "OrnamentalFrame01",
+        "height": "18",
+        "image": "garlic.png",
         "openWhenFinished": true,
-        "output": "render-output.png",
-        "outputHeight": "1024",
-        "outputWidth": "1024",
+        "output": "assets/img/garlic_OrnamentalFrame01.png",
+        "outputHeight": "512",
+        "outputWidth": "512",
         "renderer": "CYCLES",
         "wallColor": "E4DED5",
-        "width": "7"
+        "width": "24"
     },
     "savedProfiles": [
         {
