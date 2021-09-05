@@ -14,7 +14,7 @@ def getFrameList():
     l.append('MetalFloatingFrameGold')
     
     l.append('- - - Verona Frames - - -')
-    l.append('VeronaFrameBlack')
+    l.append('VeronaNarrowFrameBlack')
     l.append('VeronaFrameMattedBlack')
     l.append('VeronaFrameMattedCherry')
     l.append('VeronaFrameMattedEspresso')
