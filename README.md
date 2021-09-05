@@ -183,7 +183,7 @@ Set the hex color of the wall.
 
 Optional. Defaults to E4DED5 - a warm off-white - if not set.
 
-Some colors you can try from [Benjamin Moore](https://convertingcolors.com/list/benjamin-moore.html) or [ColorrHunt.co](https://colorhunt.co/)
+Some colors you can try from [Benjamin Moore](https://convertingcolors.com/list/benjamin-moore.html) or [ColorHunt.co](https://colorhunt.co/)
 
 |Color Name       |Hex      |Tint       |
 |---              |---      |---        |
