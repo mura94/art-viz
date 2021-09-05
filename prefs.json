@@ -1,16 +1,16 @@
 {
     "lastUsed": {
-        "depth": ".5",
-        "frameType": "OrnamentalFrame01",
-        "height": "18",
-        "image": "garlic.png",
-        "openWhenFinished": true,
-        "output": "assets/img/garlic_OrnamentalFrame01.png",
-        "outputHeight": "512",
-        "outputWidth": "512",
+        "depth": ".2",
+        "frameType": "VeronaFrameMattedEspresso",
+        "height": "12",
+        "image": "peaches.png",
+        "openWhenFinished": false,
+        "output": "render-output.png",
+        "outputHeight": "1024",
+        "outputWidth": "1024",
         "renderer": "CYCLES",
-        "wallColor": "E4DED5",
-        "width": "24"
+        "wallColor": "C0E1B9",
+        "width": "9"
     },
     "savedProfiles": [
         {

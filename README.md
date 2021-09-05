@@ -232,6 +232,8 @@ Optional. Defaults to 1024.
 
 For convenience, I've added a script that will display a user interface for faster argument input and editing. If you would like, you can run the script `RenderArgsQt.py`. PySide6 **must** be installed (you can install via `pip install pyside6`).
 
+![qt-demo](assets/qt_demo.png)
+
 ## Tips
 
 - If the result is too small, double the size values (height/width/depth) to make the art appear larger in the final image
