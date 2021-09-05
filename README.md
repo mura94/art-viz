@@ -184,7 +184,7 @@ Current `frameType` options are:
 |`ClassicFrameMattedWashedBlack`   | <img title="" src = "assets/frames/ClassicFrameMattedWashedBlack.png" alt= "ClassicFrameMattedWashedBlack" width="128" data-align="inline"> |
 
 
-> :exclamation: This list will be updated in the near future as I create more frame models!
+> :exclamation: This list will be updated as I create more frame models!
 
 ### Wall Color
 
