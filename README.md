@@ -232,7 +232,7 @@ Optional. Defaults to 1024.
 
 For convenience, I've added a script that will display a user interface for faster argument input and editing. If you would like, you can run the script `RenderArgsQt.py`. PySide6 **must** be installed (you can install via `pip install pyside6`).
 
-![qt-demo](/assets/qt_demo.png)
+<img title="" src = "assets/qt_demo.png" alt= "qtdemo" width="256" data-align="inline">
 
 ## Tips
 
