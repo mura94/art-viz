@@ -32,7 +32,7 @@
 ### Example
 
 ```bash
-blender -b art-viz.blend -P render.py -- -I peaches.png -W 24 -H 18 -D .5 -R  CYCLES -FT BlackFloatingFrame -WC E4DED5 --output peaches_rendered.png
+blender -b art-viz.blend -P render.py -- -I peaches.png -W 24 -H 18 -D .5 -R  CYCLES -FT ClassicFrameMattedWalnut -WC E4DED5 --output peaches_output.png
 ```
 
 |Input |Output       |
