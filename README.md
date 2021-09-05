@@ -37,7 +37,7 @@ blender -b art-viz.blend -P render.py -- -I garlic.png -W 24 -H 18 -D .5 -R  CYC
 
 |Input |Output       |
 |---      |---          |
-|<img title="" src="garlic.png" alt="garlic" width="256" data-align="inline">|<img title="" src="assets/garlic_WoodFloatingFrame02.png" alt="garlic_WoodFloatingFrame02" width="256" data-align="inline">|
+|<img title="" src="garlic.png" alt="garlic" width="256" data-align="inline">|<img title="" src="assets/full-frames/garlic_WoodFloatingFrame02.png" alt="garlic_WoodFloatingFrame02" width="256" data-align="inline">|
 
 *More frames will be added in future updates soon!*
 
