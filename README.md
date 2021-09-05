@@ -145,18 +145,25 @@ Current `frameType` options are:
 
 |   Name   |   Preview   |
 |---|---|
-|`WhiteFloatingFrame`       | <img title="" src="assets/garlic_WhiteFloatingFrame.png" alt="garlic_WhiteFloatingFrame" width="256" data-align="inline">             |
-|`BlackFloatingframe`       | <img title="" src="assets/garlic_BlackFloatingFrame.png" alt="garlic_BlackFloatingFrame" width="256" data-align="inline">             |
-|`WoodFloatingFrame01`      | <img title="" src="assets/garlic_WoodFloatingFrame01.png" alt="garlic_WoodFloatingFrame01" width="256" data-align="inline">           |
-|`WoodFloatingFrame02`      | <img title="" src="assets/garlic_WoodFloatingFrame02.png" alt="garlic_WoodFloatingFrame02" width="256" data-align="inline">           |
-|`WoodFloatingFrame03`      | <img title="" src="assets/garlic_WoodFloatingFrame03.png" alt="garlic_WoodFloatingFrame03" width="256" data-align="inline">           |
-|`WoodFloatingFrame04`      | <img title="" src="assets/garlic_WoodFloatingFrame04.png" alt="garlic_WoodFloatingFrame04" width="256" data-align="inline">           |
-|`WoodFloatingFrame05`      | <img title="" src="assets/garlic_WoodFloatingFrame05.png" alt="garlic_WoodFloatingFrame05" width="256" data-align="inline">           |
-|`MetalFloatingFrameSilver` | <img title="" src="assets/garlic_MetalFloatingFrameSilver.png" alt="garlic_MetalFloatingFrameSilver" width="256" data-align="inline"> |
-|`MetalFloatingFrameGold`   | <img title="" src="assets/garlic_MetalFloatingFrameGold.png" alt="garlic_MetalFloatingFrameGold" width="256" data-align="inline">     |
-|`MetalFloatingFrameBlack`  | <img title="" src="assets/garlic_MetalFloatingFrameBlack.png" alt="garlic_MetalFloatingFrameBlack" width="256" data-align="inline">   |
-|`OrnamentalFrame01`        | <img title="" src = "assets/garlic_OrnamentalFrame01.png" alt= "garlic_OrnamentalFrame01" width="256" data-align="inline">            |
-
+|`WhiteFloatingFrame`       | <img title="" src="assets/garlic_WhiteFloatingFrame.png" alt="garlic_WhiteFloatingFrame" width="256" data-align="inline">                     |
+|`BlackFloatingframe`       | <img title="" src="assets/garlic_BlackFloatingFrame.png" alt="garlic_BlackFloatingFrame" width="256" data-align="inline">                     |
+|`WoodFloatingFrame01`      | <img title="" src="assets/garlic_WoodFloatingFrame01.png" alt="garlic_WoodFloatingFrame01" width="256" data-align="inline">                   |
+|`WoodFloatingFrame02`      | <img title="" src="assets/garlic_WoodFloatingFrame02.png" alt="garlic_WoodFloatingFrame02" width="256" data-align="inline">                   |
+|`WoodFloatingFrame03`      | <img title="" src="assets/garlic_WoodFloatingFrame03.png" alt="garlic_WoodFloatingFrame03" width="256" data-align="inline">                   |
+|`WoodFloatingFrame04`      | <img title="" src="assets/garlic_WoodFloatingFrame04.png" alt="garlic_WoodFloatingFrame04" width="256" data-align="inline">                   |
+|`WoodFloatingFrame05`      | <img title="" src="assets/garlic_WoodFloatingFrame05.png" alt="garlic_WoodFloatingFrame05" width="256" data-align="inline">                   |
+|`MetalFloatingFrameSilver` | <img title="" src="assets/garlic_MetalFloatingFrameSilver.png" alt="garlic_MetalFloatingFrameSilver" width="256" data-align="inline">         |
+|`MetalFloatingFrameGold`   | <img title="" src="assets/garlic_MetalFloatingFrameGold.png" alt="garlic_MetalFloatingFrameGold" width="256" data-align="inline">             |
+|`MetalFloatingFrameBlack`  | <img title="" src="assets/garlic_MetalFloatingFrameBlack.png" alt="garlic_MetalFloatingFrameBlack" width="256" data-align="inline">           |
+|`OrnamentalFrame01`        | <img title="" src = "assets/garlic_OrnamentalFrame01.png" alt= "garlic_OrnamentalFrame01" width="256" data-align="inline">                    |
+|`VeronaFrameMattedBlack`   | <img title="" src = "assets/garlic_VeronaFrameMattedBlack.png" alt= "garlic_VeronaFrameMattedBlack" width="256" data-align="inline">          |
+|`VeronaFrameMattedCherry`   | <img title="" src = "assets/garlic_VeronaFrameMattedCherry.png" alt= "garlic_VeronaFrameMattedCherry" width="256" data-align="inline">       |
+|`VeronaFrameMattedEspresso`   | <img title="" src = "assets/garlic_VeronaFrameMattedEspresso.png" alt= "garlic_VeronaFrameMattedEspresso" width="256" data-align="inline"> |
+|`VeronaFrameMattedWalnut`   | <img title="" src = "assets/garlic_VeronaFrameMattedWalnut.png" alt= "garlic_VeronaFrameMattedWalnut" width="256" data-align="inline">       |
+|`VeronaFrameMattedMaple`   | <img title="" src = "assets/garlic_VeronaFrameMattedMaple.png" alt= "garlic_VeronaFrameMattedMaple" width="256" data-align="inline">          |
+|`VeronaFrameMattedWashedBlack`   | <img title="" src = "assets/garlic_VeronaFrameMattedWashedBlack.png" alt= "garlic_VeronaFrameMattedWashedBlack" width="256" data-align="inline"> |
+|`VeronaFrameMattedWashedWhite`   | <img title="" src = "assets/garlic_VeronaFrameMattedWashedWhite.png" alt= "garlic_VeronaFrameMattedWashedWhite" width="256" data-align="inline"> |
+|`VeronaFrameMattedRoughGrey`   | <img title="" src = "assets/garlic_VeronaFrameMattedRoughGrey.png" alt= "garlic_VeronaFrameMattedRoughGrey" width="256" data-align="inline"> |
 
 
 > :exclamation: This list will be updated in the near future as I create more frame models!

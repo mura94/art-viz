@@ -1,0 +1,31 @@
+{
+    "lastUsed": {
+        "depth": ".15",
+        "frameType": "VeronaFrameMattedBlack",
+        "height": "9.5",
+        "image": "field.jpg",
+        "openWhenFinished": false,
+        "output": "render-output.png",
+        "outputHeight": "1024",
+        "outputWidth": "1024",
+        "renderer": "CYCLES",
+        "wallColor": "E4DED5",
+        "width": "7"
+    },
+    "savedProfiles": [
+        {
+            "depth": ".5",
+            "frameType": "BlackFloatingFrame",
+            "height": "18",
+            "image": "garlic.png",
+            "name": "Default",
+            "openWhenFinished": "False",
+            "output": "render-output.png",
+            "outputHeight": 1024,
+            "outputWidth": 1024,
+            "renderer": "CYCLES",
+            "wallColor": "E4DED5",
+            "width": "24"
+        }
+    ]
+}

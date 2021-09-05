@@ -16,6 +16,8 @@ parser.add_argument('-R', '--renderer', metavar="RENDERER", type=str, help='The 
 parser.add_argument('-FT', '--frameType', metavar="FRAME", type=str, help='The type of frame to use.')
 parser.add_argument('-WC', "--wallColor", type=str, help='The hex value to apply to the wall.', default="E4DED5")
 parser.add_argument('-O', "--output", type=str, help='The output file name (with extension)', default="render-output_0000.png")
+parser.add_argument('-OW', '--outputWidth', type=int, help='The width of the output file resolution', default=1024)
+parser.add_argument('-OH', '--outputHeight', type=int, help='The height of the output file resolution', default=1024)
 
 argv = sys.argv
 startArgs = argv.index('--') + 1
@@ -33,6 +35,8 @@ renderer = args.renderer
 frame = args.frameType
 wallColor = args.wallColor
 outputName = args.output
+outputWidth = args.outputWidth
+outputHeight = args.outputHeight
 
 def hex_to_rgb(value):
     gamma = 2.2
@@ -87,6 +91,11 @@ if os.path.exists(imagePath):
     context = bpy.context
     ob = context.object
     scene = context.scene
+
+    # Set scene resolution
+    scene.render.resolution_x = outputWidth
+    scene.render.resolution_y = outputHeight
+
     bones = ob.pose.bones
 
     # Activate frame of choice

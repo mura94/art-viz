@@ -1,0 +1,25 @@
+{
+    "lastUsed": {
+        "image": "garlic.png",
+        "width": "500",
+        "height": "18",
+        "depth": ".5",
+        "renderer": "CYCLES",
+        "frameType": "BlackFloatingFrame",
+        "wallColor": "E4DED5",
+        "output": "render-output.png"
+    },
+    "savedProfiles": [
+        {
+            "name": "Default",
+            "image": "garlic.png",
+            "width": "24",
+            "height": "18",
+            "depth": ".5",
+            "renderer": "CYCLES",
+            "frameType": "BlackFloatingFrame",
+            "wallColor": "E4DED5",
+            "output": "render-output.png"
+        }
+    ]
+}
