@@ -1,16 +1,16 @@
 {
     "lastUsed": {
         "depth": ".1",
-        "frameType": "ClassicFrameMattedWashedWhite",
-        "height": "20",
+        "frameType": "ClassicFrameMattedWhite",
+        "height": "12",
         "image": "peaches.png",
-        "openWhenFinished": false,
-        "output": "peaches_output.png",
-        "outputHeight": "1024",
-        "outputWidth": "1024",
+        "openWhenFinished": true,
+        "output": "assets/frames/ClassicFrameMattedMetalWhite.png",
+        "outputHeight": "512",
+        "outputWidth": "512",
         "renderer": "CYCLES",
         "wallColor": "E4DED5",
-        "width": "15"
+        "width": "9"
     },
     "savedProfiles": [
         {

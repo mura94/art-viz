@@ -29,6 +29,7 @@ def getFrameList():
 
     l.append('- - - Classic Frames - - -')
     l.append('ClassicFrameMattedBlack')
+    l.append('ClassicFrameMattedWhite')
     l.append('ClassicFrameMattedCherry')
     l.append('ClassicFrameMattedEspresso')
     l.append('ClassicFrameMattedMaple')

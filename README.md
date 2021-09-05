@@ -171,6 +171,17 @@ Current `frameType` options are:
 |`VeronaFrameMattedWashedBlack`   | <img title="" src = "assets/frames/VeronaFrameMattedWashedBlack.png" alt= "VeronaFrameMattedWashedBlack" width="128" data-align="inline"> |
 |`VeronaFrameMattedWashedWhite`   | <img title="" src = "assets/frames/VeronaFrameMattedWashedWhite.png" alt= "VeronaFrameMattedWashedWhite" width="128" data-align="inline"> |
 |`VeronaFrameMattedRoughGrey`   | <img title="" src = "assets/frames/VeronaFrameMattedRoughGrey.png" alt= "VeronaFrameMattedRoughGrey" width="128" data-align="inline"> |
+|`ClassicFrameMattedBlack`   | <img title="" src = "assets/frames/ClassicFrameMattedBlack.png" alt= "ClassicFrameMattedBlack" width="128" data-align="inline"> |
+|`ClassicFrameMattedWhite`   | <img title="" src = "assets/frames/ClassicFrameMattedWhite.png" alt= "ClassicFrameMattedWhite" width="128" data-align="inline"> |
+|`ClassicFrameMattedCherry`   | <img title="" src = "assets/frames/ClassicFrameMattedCherry.png" alt= "ClassicFrameMattedCherry" width="128" data-align="inline"> |
+|`ClassicFrameMattedEspresso`   | <img title="" src = "assets/frames/ClassicFrameMattedEspresso.png" alt= "ClassicFrameMattedEspresso" width="128" data-align="inline"> |
+|`ClassicFrameMattedMaple`   | <img title="" src = "assets/frames/ClassicFrameMattedMaple.png" alt= "ClassicFrameMattedMaple" width="128" data-align="inline"> |
+|`ClassicFrameMattedWalnut`   | <img title="" src = "assets/frames/ClassicFrameMattedWalnut.png" alt= "ClassicFrameMattedWalnut" width="128" data-align="inline"> |
+|`ClassicFrameMattedMetalBlack`   | <img title="" src = "assets/frames/ClassicFrameMattedMetalBlack.png" alt= "ClassicFrameMattedMetalBlack" width="128" data-align="inline"> |
+|`ClassicFrameMattedMetalSilver`   | <img title="" src = "assets/frames/ClassicFrameMattedMetalSilver.png" alt= "ClassicFrameMattedMetalSilver" width="128" data-align="inline"> |
+|`ClassicFrameMattedMetalGold`   | <img title="" src = "assets/frames/ClassicFrameMattedMetalGold.png" alt= "ClassicFrameMattedMetalGold" width="128" data-align="inline"> |
+|`ClassicFrameMattedWashedWhite`   | <img title="" src = "assets/frames/ClassicFrameMattedWashedWhite.png" alt= "ClassicFrameMattedWashedWhite" width="128" data-align="inline"> |
+|`ClassicFrameMattedWashedBlack`   | <img title="" src = "assets/frames/ClassicFrameMattedWashedBlack.png" alt= "ClassicFrameMattedWashedBlack" width="128" data-align="inline"> |
 
 
 > :exclamation: This list will be updated in the near future as I create more frame models!
