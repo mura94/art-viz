@@ -37,7 +37,7 @@ blender -b art-viz.blend -P render.py -- -I peaches.png -W 24 -H 18 -D .5 -R  CY
 
 |Input |Output       |
 |---      |---          |
-|<img title="" src="peaches.png" alt="peaches" height="256" data-align="inline"> | <img title="" src="peaches_output.png" alt="peaches_output" height="256" data-align="inline">|
+|<img title="" src="peaches.png" alt="peaches" width="160" data-align="inline"> | <img title="" src="peaches_output.png" alt="peaches_output" height="256" data-align="inline">|
 
 *More frames will be added in future updates soon!*
 
