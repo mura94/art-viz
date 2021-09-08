@@ -1,0 +1,31 @@
+{
+	"name": "blender",
+	//// Use this if you use a custom image.
+	//"build": {
+	//	"dockerfile": "../Docker/Dockerfile",
+	// },
+	// Use this if you only need to run the image directly. 
+	"image": "nytimes/blender:latest",
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+
+	"workspaceMount": "source=${localWorkspaceFolder},target=/root/${localWorkspaceFolderBasename},type=bind", 
+	"workspaceFolder": "/root/${localWorkspaceFolderBasename}",
+	// We also mount the config folder from the host system. This way, settings 
+	// inside the container are kept between runs.
+	"mounts": [
+		"source=${localWorkspaceFolder}/.devcontainer/.config/blender,target=/root/.config/blender/,type=bind"
+	],
+	"runArgs": [
+		"-it", 
+		"--rm", // Removes the container on exit. Remove this if you want the container to keep running.
+		"--gpus", "all",
+		"-v", "/tmp/.X11-unix:/tmp/.X11-unix:rw", 
+		"-v", "/tmp/.docker.xauth:/tmp/.docker.xauth:rw", 
+		"-e", "DISPLAY=${localEnv:DISPLAY}", 
+		"-e", "XAUTHORITY=/tmp/.docker.xauth", 
+		"--device", "/dev/dri/card0:/dev/dri/card0"
+	],
+	"extensions": []
+}

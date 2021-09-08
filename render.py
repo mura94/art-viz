@@ -4,39 +4,6 @@ import bpy, sys, os
 import pathlib
 import argparse
 
-############
-#### argparse
-parser = argparse.ArgumentParser(description='Generate visually realistic renders of paintings or other 2D artwork.')
-parser.add_argument('-I', '--image', metavar='IMG', type=str, help='The relative path of the original image')
-
-parser.add_argument('-W', '--width', metavar='WIDTH', type=float, help='The width of the original in inches',default=10)
-parser.add_argument('-H', '--height', metavar='HEIGHT', type=float,help='The height of the original in inches',default=10)
-parser.add_argument('-D', '--depth', metavar='DEPTH', type=float, help='The depth of the original in inches', default=1)
-parser.add_argument('-R', '--renderer', metavar="RENDERER", type=str, help='The desired renderer to use within Blender. ex: CYCLES', default='CYCLES')
-parser.add_argument('-FT', '--frameType', metavar="FRAME", type=str, help='The type of frame to use.')
-parser.add_argument('-WC', "--wallColor", type=str, help='The hex value to apply to the wall.', default="E4DED5")
-parser.add_argument('-O', "--output", type=str, help='The output file name (with extension)', default="render-output_0000.png")
-parser.add_argument('-OW', '--outputWidth', type=int, help='The width of the output file resolution', default=1024)
-parser.add_argument('-OH', '--outputHeight', type=int, help='The height of the output file resolution', default=1024)
-
-argv = sys.argv
-startArgs = argv.index('--') + 1
-argv = argv[startArgs:]
-args = parser.parse_args(argv)
-#############
-
-# Get arg values
-imagePath = args.image
-renderer = args.renderer
-width = args.width
-height = args.height
-depth = args.depth
-renderer = args.renderer
-frame = args.frameType
-wallColor = args.wallColor
-outputName = args.output
-outputWidth = args.outputWidth
-outputHeight = args.outputHeight
 
 def hex_to_rgb(value):
     gamma = 2.2
@@ -53,88 +20,121 @@ def hex_to_rgb(value):
     fin.append(1.0)
     return tuple(fin)
 
-if os.path.exists(imagePath):
-    # Assign image to canvas object's material
-    canvas = bpy.data.objects['Canvas']
-    canvasMat = canvas.material_slots['CanvasMat'].material
-    canvasMat.use_nodes = True
-    bsdf = canvasMat.node_tree.nodes["Principled BSDF"]
-    texImage = canvasMat.node_tree.nodes.new('ShaderNodeTexImage')
-    texImage.image = bpy.data.images.load(bpy.path.relpath(imagePath))
-    canvasMat.node_tree.links.new(bsdf.inputs['Base Color'], texImage.outputs['Color'])
+def doRender(args):
 
-    print(wallColor)
-    wall = bpy.data.objects['Wall']
-    wallMat = wall.material_slots['Wall'].material
-    wallMat.use_nodes = True
-    principled_bsdf = wallMat.node_tree.nodes['Principled BSDF']
-    rgb = hex_to_rgb(wallColor)
-    if principled_bsdf is not None:
-        principled_bsdf.inputs[0].default_value = (rgb[0], rgb[1], rgb[2], 1)
+    # Get arg values
+    imagePath = args.image
+    renderer = args.renderer
+    width = args.width
+    height = args.height
+    depth = args.depth
+    renderer = args.renderer
+    frame = args.frameType
+    wallColor = args.wallColor
+    outputName = args.output
+    outputWidth = args.outputWidth
+    outputHeight = args.outputHeight
 
-    #(0.024158, 0.026241, 0.05448, 1)
+    if os.path.exists(imagePath):
+        # Assign image to canvas object's material
+        canvas = bpy.data.objects['Canvas']
+        canvasMat = canvas.material_slots['CanvasMat'].material
+        canvasMat.use_nodes = True
+        bsdf = canvasMat.node_tree.nodes["Principled BSDF"]
+        texImage = canvasMat.node_tree.nodes.new('ShaderNodeTexImage')
+        texImage.image = bpy.data.images.load(bpy.path.relpath(imagePath))
+        canvasMat.node_tree.links.new(bsdf.inputs['Base Color'], texImage.outputs['Color'])
 
-    # Set renderer type  based on arg
-    bpy.context.scene.render.engine = renderer
+        print(wallColor)
+        wall = bpy.data.objects['Wall']
+        wallMat = wall.material_slots['Wall'].material
+        wallMat.use_nodes = True
+        principled_bsdf = wallMat.node_tree.nodes['Principled BSDF']
+        rgb = hex_to_rgb(wallColor)
+        if principled_bsdf is not None:
+            principled_bsdf.inputs[0].default_value = (rgb[0], rgb[1], rgb[2], 1)
 
-    # Setup cycles to use GPU compute (comment out if using CPU compute)
-    if(renderer == "CYCLES"):
-        bpy.context.scene.render.engine = 'CYCLES' 
-        bpy.data.scenes["Scene"].cycles.device='GPU' 
-        bpy.context.scene.cycles.device = 'GPU'
+        #(0.024158, 0.026241, 0.05448, 1)
 
-    # Set dimensions using an armature
-    bpy.context.view_layer.objects.active = bpy.data.objects['Sizer']
-    bpy.ops.object.mode_set(mode='POSE')
+        # Set renderer type  based on arg
+        bpy.context.scene.render.engine = renderer
+
+        # Setup cycles to use GPU compute (comment out if using CPU compute)
+        if(renderer == "CYCLES"):
+            bpy.context.scene.render.engine = 'CYCLES' 
+            bpy.data.scenes["Scene"].cycles.device='GPU' 
+            bpy.context.scene.cycles.device = 'GPU'
+
+        # Set dimensions using an armature
+        bpy.context.view_layer.objects.active = bpy.data.objects['Sizer']
+        bpy.ops.object.mode_set(mode='POSE')
 
 
-    context = bpy.context
-    ob = context.object
-    scene = context.scene
+        context = bpy.context
+        ob = context.object
+        scene = context.scene
 
-    # Set scene resolution
-    scene.render.resolution_x = outputWidth
-    scene.render.resolution_y = outputHeight
+        # Set scene resolution
+        scene.render.resolution_x = outputWidth
+        scene.render.resolution_y = outputHeight
 
-    bones = ob.pose.bones
+        bones = ob.pose.bones
 
-    # Activate frame of choice
-    if(frame != 'None'):
-        frameObject = bpy.data.objects[frame]
-        frameObject.hide_render = False
+        # Activate frame of choice
+        if(frame != 'None'):
+            frameObject = bpy.data.objects[frame]
+            frameObject.hide_render = False
+            
+        if("Matted" in frame):
+            matObject = bpy.data.objects["Mat"]
+            matObject.hide_render = False
+
+        # Set height
+        top = bones['Top']
+        bottom = bones['Bottom']
+        top.location = (0, height - 2, 0)
+        bottom.location = (0, height - 2, 0)
+
+        # Set width
+        left = bones['Left']
+        right = bones['Right']
+        left.location = (0, width - 2, 0)
+        right.location = (0, width - 2, 0)
+
+        # Set Depth
+        depthb = bones['Depth']
+        depthb.location = (0, depth - 0.1, 0)
+
+        # Render to separate file, identified by texture file
+        path = str(pathlib.Path(__file__).parent.resolve())
+        path += '/'
         
-    if("Matted" in frame):
-        matObject = bpy.data.objects["Mat"]
-        matObject.hide_render = False
 
-    # Set height
-    top = bones['Top']
-    bottom = bones['Bottom']
-    top.location = (0, height - 2, 0)
-    bottom.location = (0, height - 2, 0)
+        bpy.context.scene.render.filepath = path + outputName
+        
+        # Render still image, automatically write to output path
+        bpy.ops.render.render(write_still=True)
+    else:
+        print("Missing Image:", imagePath)
 
-    # Set width
-    left = bones['Left']
-    right = bones['Right']
-    left.location = (0, width - 2, 0)
-    right.location = (0, width - 2, 0)
 
-    # Set Depth
-    depthb = bones['Depth']
-    depthb.location = (0, depth - 0.1, 0)
+if(__name__ == "__main__"):   
+# argparse
+    parser = argparse.ArgumentParser(description='Generate visually realistic renders of paintings or other 2D artwork.')
+    parser.add_argument('-I', '--image', metavar='IMG', type=str, help='The relative path of the original image')
 
-    # Render to separate file, identified by texture file
-    path = str(pathlib.Path(__file__).parent.resolve())
-    path += '/'
-    
+    parser.add_argument('-W', '--width', metavar='WIDTH', type=float, help='The width of the original in inches',default=10)
+    parser.add_argument('-H', '--height', metavar='HEIGHT', type=float,help='The height of the original in inches',default=10)
+    parser.add_argument('-D', '--depth', metavar='DEPTH', type=float, help='The depth of the original in inches', default=1)
+    parser.add_argument('-R', '--renderer', metavar="RENDERER", type=str, help='The desired renderer to use within Blender. ex: CYCLES', default='CYCLES')
+    parser.add_argument('-FT', '--frameType', metavar="FRAME", type=str, help='The type of frame to use.')
+    parser.add_argument('-WC', "--wallColor", type=str, help='The hex value to apply to the wall.', default="E4DED5")
+    parser.add_argument('-O', "--output", type=str, help='The output file name (with extension)', default="render-output_0000.png")
+    parser.add_argument('-OW', '--outputWidth', type=int, help='The width of the output file resolution', default=1024)
+    parser.add_argument('-OH', '--outputHeight', type=int, help='The height of the output file resolution', default=1024)
 
-    bpy.context.scene.render.filepath = path + outputName
-    
-    # Render still image, automatically write to output path
-    bpy.ops.render.render(write_still=True)
-
-    print(frame)
-    print(wallColor)
-
-else:
-    print("Missing Image:", imagePath)
+    argv = sys.argv
+    startArgs = argv.index('--') + 1
+    argv = argv[startArgs:]
+    args = parser.parse_args(argv)
+    doRender(args)

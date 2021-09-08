@@ -6,6 +6,8 @@ from PySide6.QtWidgets import (QAbstractButton, QComboBox, QLabel, QLineEdit, QP
 import subprocess
 import frames as fr
 import prefs
+import args
+import invokeRender
 
 currentDir = os.path.dirname(os.path.abspath(__file__)) + '/'
 
@@ -19,7 +21,6 @@ class Form(QDialog):
     def __init__(self, parent=None):
         super(Form, self).__init__(parent)
 
-        # Create arg widgets
         self.imgLabel = QLabel("--image")
         self.image = QLineEdit(lastUsed['image'])
 
@@ -43,7 +44,6 @@ class Form(QDialog):
         self.frameDropdown.setCurrentIndex(framesList.index(lastUsed['frameType']))
 
         self.frameTypeLabel = QLabel("--frameType")
-        # self.frame = QLineEdit(framesList)
 
         self.wallColorLabel = QLabel("--wallColor")
         self.wallColor = QLineEdit(lastUsed['wallColor'])
@@ -61,11 +61,9 @@ class Form(QDialog):
         self.openWhenFinished.setCheckable(True)
         self.openWhenFinished.setChecked(bool(lastUsed['openWhenFinished']))
 
-        # Submit button
         self.button = QPushButton("Run with Args")
         self.openButton = QPushButton("Open Output File")
 
-        # Create layout and add widgets
         layout = QVBoxLayout()
         layout.addWidget(self.imgLabel)
         layout.addWidget(self.image)
@@ -84,7 +82,6 @@ class Form(QDialog):
 
         layout.addWidget(self.frameTypeLabel)
         layout.addWidget(self.frameDropdown)
-        # layout.addWidget(self.frame)
 
         layout.addWidget(self.wallColorLabel)
         layout.addWidget(self.wallColor)
@@ -102,9 +99,8 @@ class Form(QDialog):
         layout.addWidget(self.openButton)
         layout.addWidget(self.openWhenFinished)
         
-        # Set dialog layout
         self.setLayout(layout)
-        # Add button signal to greetings slot
+
         self.openButton.clicked.connect(self.openButtonClicked)
         self.button.clicked.connect(self.setLastUsedValues)
         self.button.clicked.connect(self.runWithArgs)
@@ -130,37 +126,30 @@ class Form(QDialog):
         print('Setting last used values in prefs file')
         prefs.setLastUsed(lastUsed)
 
-    # Greets the user
     def runWithArgs(self):
         if("- - - " in self.frameDropdown.currentText()):
             print("Please pick a legitimate frame type")
             return
-        s = bashCommand + '-I' + currentDir + self.image.text()
-        s +=  ' -W ' +self.w.text() 
-        s +=  ' -H ' +self.h.text() 
-        s +=  ' -D ' +self.d.text() 
-        s +=  ' -R ' +self.renderer.currentText() 
-        s +=  ' -FT ' +self.frameDropdown.currentText() 
-        s +=  ' -WC ' +self.wallColor.text() 
-        s += ' -O ' + self.output.text()
-        s += ' -OW ' + self.outputWidth.text()
-        s += ' -OH ' + self.outputHeight.text()
+        a = args.RenderArgs()    
+        a.width = self.w.text() 
+        a.height = self.h.text() 
+        a.depth = self.d.text() 
+        a.renderer = self.renderer.currentText() 
+        a.frameType = self.frameDropdown.currentText() 
+        a.wallColor = self.wallColor.text() 
+        a.output = self.output.text()
+        a.outputWidth = self.outputWidth.text()
+        a.outputHeight = self.outputHeight.text()
+        a.openWhenFinished = self.openWhenFinished.isChecked()
+        invokeRender.render(a)
 
-        print(s)
-        subprocess.run(s)
-        if(self.openWhenFinished.isChecked()):
-            os.startfile(currentDir + self.output.text())
-
-        # output, error = process.communicate()
-
-        
-if __name__ == '__main__':
-    # Create the Qt Application
+def showRenderWindow():
     app = QApplication(sys.argv)
-    # Create and show the form
     form = Form()
     form.setWindowTitle("art-viz")
     form.setMinimumWidth(300)
     form.show()
-    # Run the main Qt loop
     sys.exit(app.exec())
+
+if __name__ == '__main__':
+    showRenderWindow()
