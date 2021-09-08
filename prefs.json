@@ -1,16 +1,16 @@
 {
     "lastUsed": {
         "depth": ".1",
-        "frameType": "ClassicFrameMattedWalnut",
-        "height": "20",
-        "image": "peaches.png",
+        "frameType": "BlackFloatingFrame",
+        "height": "10",
+        "image": "Sunset_2x1_03.png",
         "openWhenFinished": true,
-        "output": "peaches_output.png",
+        "output": "sunset_01_output.png",
         "outputHeight": "1024",
         "outputWidth": "1024",
-        "renderer": "CYCLES",
+        "renderer": "BLENDER_EEVEE",
         "wallColor": "E4DED5",
-        "width": "15"
+        "width": "20"
     },
     "savedProfiles": [
         {
