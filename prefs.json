@@ -1,16 +1,16 @@
 {
     "lastUsed": {
         "depth": ".1",
-        "frameType": "BlackFloatingFrame",
-        "height": "10",
-        "image": "Sunset_2x1_03.png",
+        "frameType": "VeronaFrameMattedWashedWhite",
+        "height": "9",
+        "image": "flowers.jpg",
         "openWhenFinished": true,
-        "output": "sunset_01_output.png",
+        "output": "flowers-output.png",
         "outputHeight": "1024",
         "outputWidth": "1024",
-        "renderer": "BLENDER_EEVEE",
+        "renderer": "CYCLES",
         "wallColor": "E4DED5",
-        "width": "20"
+        "width": "16"
     },
     "savedProfiles": [
         {

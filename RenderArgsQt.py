@@ -130,7 +130,8 @@ class Form(QDialog):
         if("- - - " in self.frameDropdown.currentText()):
             print("Please pick a legitimate frame type")
             return
-        a = args.RenderArgs()    
+        a = args.RenderArgs()
+        a.image = self.image.text()    
         a.width = self.w.text() 
         a.height = self.h.text() 
         a.depth = self.d.text() 
