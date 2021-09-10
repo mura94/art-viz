@@ -247,7 +247,7 @@ For convenience, I've added a script that will display a user interface for fast
 Run in the repository root directory with:
 
 ```bash
-& python .\RenderArgsQt.py
+& python renderQt.py
 ````
 
 <img title="" src = "assets/qt_demo.PNG" alt= "qtdemo" width="256" data-align="inline">

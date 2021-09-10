@@ -1,4 +1,4 @@
-import RenderArgsQt as qt
+import renderQt as qt
 
 class RenderArgs():
     def __init__(self, parent=None):
