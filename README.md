@@ -46,8 +46,9 @@ blender -b art-viz.blend -P render.py -- -I peaches.png -W 24 -H 18 -D .5 -R  CY
 ## Dependencies
 
 - Blender 2.8+
-- Local Blender executable folder **must** be added to PATH
+- Local Blender executable folder **must** be added to PATH to invoke `$ blender`
 - Python 3.8.2+
+  - Must be added to PATH to invoke `$ python`
 - PySide6
   - Only required if you want to use the optional args input interface
   - Install with `pip install pyside6`
@@ -247,7 +248,7 @@ For convenience, I've added a script that will display a user interface for fast
 Run in the repository root directory with:
 
 ```bash
-& python renderQt.py
+python renderQt.py
 ````
 
 <img title="" src = "assets/qt_demo.PNG" alt= "qtdemo" width="256" data-align="inline">
