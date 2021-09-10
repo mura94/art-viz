@@ -1,14 +1,14 @@
 {
     "lastUsed": {
         "depth": ".1",
-        "frameType": "VeronaFrameMattedWashedWhite",
+        "frameType": "ClassicFrameMattedWalnut",
         "height": "12",
         "image": "peaches.png",
         "openWhenFinished": true,
         "output": "render-output.png",
         "outputHeight": "1024",
         "outputWidth": "1024",
-        "renderer": "BLENDER_EEVEE",
+        "renderer": "CYCLES",
         "wallColor": "E4DED5",
         "width": "9"
     },
