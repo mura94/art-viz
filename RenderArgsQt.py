@@ -155,9 +155,7 @@ class Form(QDialog):
         layout.addWidget(self.button)
         layout.addWidget(self.openButton)
 
-        
         self.setLayout(layout)
-
 
         self.openButton.clicked.connect(self.openButtonClicked)
         self.button.clicked.connect(self.setLastUsedValues)
