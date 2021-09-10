@@ -2,15 +2,15 @@
     "lastUsed": {
         "depth": ".1",
         "frameType": "VeronaFrameMattedWashedWhite",
-        "height": "9",
-        "image": "flowers.jpg",
+        "height": "12",
+        "image": "peaches.png",
         "openWhenFinished": true,
-        "output": "flowers-output.png",
+        "output": "render-output.png",
         "outputHeight": "1024",
         "outputWidth": "1024",
-        "renderer": "CYCLES",
+        "renderer": "BLENDER_EEVEE",
         "wallColor": "E4DED5",
-        "width": "16"
+        "width": "9"
     },
     "savedProfiles": [
         {

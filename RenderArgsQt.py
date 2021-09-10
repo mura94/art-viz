@@ -1,8 +1,9 @@
 import os
 from os import curdir, pipe
 import sys
-from PySide6.QtWidgets import (QAbstractButton, QComboBox, QLabel, QLineEdit, QPushButton, QApplication, QToolButton,
+from PySide6.QtWidgets import (QAbstractButton, QCheckBox, QComboBox, QFileDialog, QLabel, QLineEdit, QPushButton, QApplication, QRadioButton, QToolButton,
     QVBoxLayout, QDialog)    
+from PySide6 import QtGui
 import subprocess
 import frames as fr
 import prefs
@@ -16,24 +17,78 @@ bashCommand = "blender -b " + currentDir + "art-viz.blend -P " + currentDir + "r
 framesList = fr.getFrameList()
 lastUsed = prefs.getLastUsed()
 
+brightColor = '#00818A'
+lightColor = '#DBEDF3'
+medColor = '#404B69'
+darkColor = '#283149'
+
+textColor = lightColor
+
+style = ("QPushButton { background-color: %s;"
+                            "border-radius: 3px;"
+                            "border-color: %s;"
+                            "border-style: none;"
+                            "border-width: 2px;"
+                            "color: %s;"
+                            "padding: 4px"
+                            "}" 
+                            "QPushButton:!hover { background-color: #283149; border-style: none; }"
+                            "QPushButton:hover { background-color: #00818A; border-style: none; }"
+                            "QPushButton:pressed { background-color: %s; border-style: none; color: black}"
+                            "QLineEdit {"
+                            "border: 1px solid gray;"
+                            "border-radius: 3px;"
+                            "padding: 0 2px;"
+                            "background: %s;"
+                            "selection-background-color: %s;"
+                            "color: #DBEDF3;"
+                            "}"
+                            "QMainWindow {"
+                            "background: %s;"
+                            "width: 10px;"
+                            "height: 10px;"
+                            "}"
+                            "QLineEdit:hover {"
+                            "background: #283149;"
+                            "}"
+                            "QComboBox {"
+                            "border: 1px solid %s;"
+                            "border-radius: 2px;"
+                            "background-color: %s;"
+                            "color: #DBEDF3;"
+                            "}"
+                            "QLabel {"
+                            "font-weight: bold;"
+                            "color: %s;"
+                            "}"
+                            "QWidget {"
+                            "background-color: %s;"
+                            "}"
+                            "QRadioButton {"
+                            "color: #DBEDF3;"
+                            "}"
+                            % (darkColor, lightColor, lightColor, lightColor, lightColor, brightColor, lightColor, 'gray', lightColor, lightColor, medColor))
+
 class Form(QDialog):
 
     def __init__(self, parent=None):
         super(Form, self).__init__(parent)
 
-        self.imgLabel = QLabel("--image")
+        self.setStyleSheet(style)
+                            
+        self.imgLabel = QLabel("Image")
         self.image = QLineEdit(lastUsed['image'])
 
-        self.widthLabel = QLabel("--width")
+        self.widthLabel = QLabel("Width")
         self.w = QLineEdit(lastUsed['width'])
 
-        self.heightLabel = QLabel("--height")
+        self.heightLabel = QLabel("Height")
         self.h = QLineEdit(lastUsed['height'])
 
-        self.depthLabel = QLabel("--depth")
+        self.depthLabel = QLabel("Depth")
         self.d = QLineEdit(lastUsed['depth'])
 
-        self.rendererLabel = QLabel("--renderer")
+        self.rendererLabel = QLabel("Renderer")
         self.renderer = QComboBox()
         renderers = fr.getRenderersList()
         self.renderer.addItems(renderers)
@@ -43,28 +98,28 @@ class Form(QDialog):
         self.frameDropdown.addItems(framesList)
         self.frameDropdown.setCurrentIndex(framesList.index(lastUsed['frameType']))
 
-        self.frameTypeLabel = QLabel("--frameType")
+        self.frameTypeLabel = QLabel("Frame Type")
 
-        self.wallColorLabel = QLabel("--wallColor")
+        self.wallColorLabel = QLabel("Wall Color")
         self.wallColor = QLineEdit(lastUsed['wallColor'])
 
-        self.outputLabel = QLabel("--output")
+        self.outputLabel = QLabel("Output")
         self.output = QLineEdit(lastUsed['output'])
 
-        self.outputWidthLabel = QLabel("--outputWidth")
+        self.outputWidthLabel = QLabel("Output Width")
         self.outputWidth = QLineEdit(str(lastUsed['outputWidth']))
 
-        self.outputHeightLabel = QLabel("--outputHeight")
+        self.outputHeightLabel = QLabel("Output Height")
         self.outputHeight = QLineEdit(str(lastUsed['outputHeight']))
-
-        self.openWhenFinished = QPushButton("Open output when finished")
-        self.openWhenFinished.setCheckable(True)
-        self.openWhenFinished.setChecked(bool(lastUsed['openWhenFinished']))
 
         self.button = QPushButton("Run with Args")
         self.openButton = QPushButton("Open Output File")
 
+        self.openWhenFinished = QRadioButton("Open When Finished")
+        self.openWhenFinished.setChecked(bool(lastUsed['openWhenFinished']))
+
         layout = QVBoxLayout()
+
         layout.addWidget(self.imgLabel)
         layout.addWidget(self.image)
 
@@ -94,12 +149,15 @@ class Form(QDialog):
 
         layout.addWidget(self.outputHeightLabel)
         layout.addWidget(self.outputHeight)
+        
+        layout.addWidget(self.openWhenFinished)
 
         layout.addWidget(self.button)
         layout.addWidget(self.openButton)
-        layout.addWidget(self.openWhenFinished)
+
         
         self.setLayout(layout)
+
 
         self.openButton.clicked.connect(self.openButtonClicked)
         self.button.clicked.connect(self.setLastUsedValues)
