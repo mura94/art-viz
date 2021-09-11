@@ -2,7 +2,7 @@
     "lastUsed": {
         "depth": ".2",
         "frameType": "NielsenMattedFrameBlackMetal",
-        "height": "16",
+        "height": "12",
         "image": "peaches.png",
         "openWhenFinished": true,
         "output": "peaches-output.png",
@@ -11,7 +11,7 @@
         "renderDevice": "GPU",
         "renderer": "CYCLES",
         "wallColor": "Default",
-        "width": "12"
+        "width": "9"
     },
     "savedProfiles": [
         {
