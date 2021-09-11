@@ -5,7 +5,7 @@ Preview your art in different frames with photorealistic simulated light and phy
 > This repository is in active development. Check again in the future for future developments.
 
 - [🖼️ art-viz](#️-art-viz)
-  - [ℹ️ Usage](#ℹ️-usage)
+  - [⌨️ Usage](#️-usage)
     - [Example](#example)
   - [🔗 Dependencies](#-dependencies)
   - [🛠️ Development](#️-development)
@@ -26,7 +26,7 @@ Preview your art in different frames with photorealistic simulated light and phy
   - [🎁 Qt Interface](#-qt-interface)
   - [❕ Tips](#-tips)
 
-## ℹ️ Usage
+## ⌨️ Usage
 
  `blender -b <filename> -P <this_script> -- [--image or -I] <image-path> [--width or -W] <width-inches> [--height or -H] <height-inches> [--depth or -D] <depth-inches> [--renderer or -R] <renderer> [--frameType or -FT] <frame-type> [--wallColor or -WC] <wall-color-hex> --output <output-file-name>`
 
