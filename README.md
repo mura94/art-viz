@@ -23,7 +23,7 @@ Preview your art in different frames with photorealistic simulated light and phy
     - [Output Width](#output-width)
     - [Output Height](#output-height)
     - [Render Device](#render-device)
-  - [Qt Interface](#qt-interface)
+  - [Qt Interface 🐍](#qt-interface-)
   - [Tips](#tips)
 
 ## Usage
@@ -250,7 +250,7 @@ The desired render device type. Options are `GPU` or `CPU`
 
 Optional. Defaults to `GPU`
 
-## Qt Interface
+## Qt Interface 🐍
 
 For convenience, I've added a script that will display a user interface for faster argument input and editing. If you would like, you can run the script `RenderArgsQt.py`. PySide6 **must** be installed (you can install via `pip install pyside6`).
 
