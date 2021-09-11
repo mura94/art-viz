@@ -95,7 +95,7 @@ blender -b art-viz.blend -P render.py -- -I peaches.png -W 24 -H 18 -D .5 -R  CY
 Start by copy and pasting this before you add custom args:
 
 ```markdown
-blender -b .\art-viz.blend -P render.py   -- 
+blender -b art-viz.blend -P render.py   -- 
 ```
 
 Everything that comes after `--` will be user-defined arguments, parsed in `render.py`.
@@ -145,7 +145,7 @@ ex: `--frameType WhiteFloatingFrame` or `-FT WhiteFloatingFrame`
 
 The frame that will surround the piece.
 
-[:arrow_up: Back to Top](#art-viz)
+[:arrow_up: Back to Top](#top)
 
 #### Frame Options
 
