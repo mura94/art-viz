@@ -44,3 +44,26 @@ def getFrameList():
 
 def getRenderersList():
     return ['CYCLES', 'BLENDER_EEVEE', 'BLENDER_WORKBENCH']
+
+colorDict = {
+    'Default': 'E4DED5',
+    'Deep Sea': '002831',
+    'Dark Navy': '2B2D42',
+    'Cool Grey': '8D99AE',
+    'Anti-Flash White': 'EDF2F4',
+    'Terra': 'DEBFA0',
+    'Fiji': '4F8093',
+    'Caponata': '463234',
+    'Salmon': 'F29479',
+    'Herb': '63774A',
+    'Mint': 'D5DFCC',
+    'Vintage': '575E50',
+    'Deep Red': '310500',
+    'Dirty Grey': '545041',
+    'Strong Blue': '202B54',
+    'Honeydew': 'C0E1B9',
+    'Sioux': '80968F',
+    'Deep': '265557',
+    'Lazy': '5F90B7',
+    'Stunning': '424B63'
+}

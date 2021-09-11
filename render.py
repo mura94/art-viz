@@ -34,6 +34,7 @@ def doRender(args):
     outputName = args.output
     outputWidth = args.outputWidth
     outputHeight = args.outputHeight
+    renderDevice = args.renderDevice
 
     if os.path.exists(imagePath):
         # Assign image to canvas object's material
@@ -45,7 +46,6 @@ def doRender(args):
         texImage.image = bpy.data.images.load(bpy.path.relpath(imagePath))
         canvasMat.node_tree.links.new(bsdf.inputs['Base Color'], texImage.outputs['Color'])
 
-        print(wallColor)
         wall = bpy.data.objects['Wall']
         wallMat = wall.material_slots['Wall'].material
         wallMat.use_nodes = True
@@ -62,8 +62,8 @@ def doRender(args):
         # Setup cycles to use GPU compute (comment out if using CPU compute)
         if(renderer == "CYCLES"):
             bpy.context.scene.render.engine = 'CYCLES' 
-            bpy.data.scenes["Scene"].cycles.device='GPU' 
-            bpy.context.scene.cycles.device = 'GPU'
+            bpy.data.scenes["Scene"].cycles.device = renderDevice
+            bpy.context.scene.cycles.device = renderDevice
 
         # Set dimensions using an armature
         bpy.context.view_layer.objects.active = bpy.data.objects['Sizer']
@@ -132,6 +132,7 @@ if(__name__ == "__main__"):
     parser.add_argument('-O', "--output", type=str, help='The output file name (with extension)', default="render-output_0000.png")
     parser.add_argument('-OW', '--outputWidth', type=int, help='The width of the output file resolution', default=1024)
     parser.add_argument('-OH', '--outputHeight', type=int, help='The height of the output file resolution', default=1024)
+    parser.add_argument('-RD', '--renderDevice', type=str, help='The render device type (CPU or GPU)', default='GPU')
 
     argv = sys.argv
     startArgs = argv.index('--') + 1

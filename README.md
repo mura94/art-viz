@@ -1,10 +1,10 @@
-# art-viz
-
- Hanging art simulation tool using Blender command line tools & Python. Visualize how your art will look hanging on a wall with photo-realistic, computer-generated lighting.
+# art-viz 🖼️
+ 
+Preview your art in different frames with photorealistic simulated light and physically based materials using Blender and python.
 
 > This repository is in active development. Check again in the future for future developments.
 
-- [art-viz](#art-viz)
+- [art-viz 🖼️](#art-viz-️)
   - [Usage](#usage)
     - [Example](#example)
   - [Dependencies](#dependencies)
@@ -22,6 +22,7 @@
     - [Output](#output)
     - [Output Width](#output-width)
     - [Output Height](#output-height)
+    - [Render Device](#render-device)
   - [Qt Interface](#qt-interface)
   - [Tips](#tips)
 
@@ -240,6 +241,14 @@ ex: `--outputHeight 1024` or `-OH 1024`
 The desired resolution height of the final rendered image.
 
 Optional. Defaults to 1024.
+
+### Render Device
+
+ex `--renderDevice GPU` or `-RD GPU`
+
+The desired render device type. Options are `GPU` or `CPU`
+
+Optional. Defaults to `GPU`
 
 ## Qt Interface
 

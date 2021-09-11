@@ -4,12 +4,13 @@
         "frameType": "ClassicFrameMattedWalnut",
         "height": "12",
         "image": "peaches.png",
-        "openWhenFinished": true,
+        "openWhenFinished": false,
         "output": "render-output.png",
         "outputHeight": "1024",
         "outputWidth": "1024",
-        "renderer": "CYCLES",
-        "wallColor": "E4DED5",
+        "renderDevice": "CPU",
+        "renderer": "BLENDER_EEVEE",
+        "wallColor": "Default",
         "width": "9"
     },
     "savedProfiles": [
@@ -23,6 +24,7 @@
             "output": "render-output.png",
             "outputHeight": 1024,
             "outputWidth": 1024,
+            "renderDevice": "GPU",
             "renderer": "CYCLES",
             "wallColor": "E4DED5",
             "width": "24"

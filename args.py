@@ -13,3 +13,4 @@ class RenderArgs():
         self.outputWidth = 1024
         self.outputHeight = 1024
         self.openWhenFinished = True
+        self.renderDevice = 'GPU'

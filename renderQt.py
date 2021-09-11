@@ -107,6 +107,14 @@ class Form(QDialog):
         self.renderer.addItems(renderers)
         self.renderer.setCurrentIndex(renderers.index(lastUsed['renderer']))
 
+
+        self.renderDeviceLabel = QLabel("Render Device")
+
+        self.renderDevice = QComboBox()
+        renderTypes = ['GPU', 'CPU']
+        self.renderDevice.addItems(renderTypes)
+        self.renderDevice.setCurrentIndex(renderTypes.index(lastUsed['renderDevice']))
+
         self.frameDropdown = QComboBox()
         self.frameDropdown.addItems(framesList)
         self.frameDropdown.setCurrentIndex(framesList.index(lastUsed['frameType']))
@@ -115,6 +123,10 @@ class Form(QDialog):
 
         self.wallColorLabel = QLabel("Wall Color")
         self.wallColor = QLineEdit(lastUsed['wallColor'])
+        
+        self.wallColorSelect = QComboBox()
+        self.wallColorSelect.addItems(fr.colorDict)
+        self.wallColorSelect.setEditable(True)
 
         self.outputLabel = QLabel("Output")
         self.output = QLineEdit(lastUsed['output'])
@@ -148,11 +160,15 @@ class Form(QDialog):
         layout.addWidget(self.rendererLabel)
         layout.addWidget(self.renderer)
 
+        layout.addWidget(self.renderDeviceLabel)
+        layout.addWidget(self.renderDevice)
+
         layout.addWidget(self.frameTypeLabel)
         layout.addWidget(self.frameDropdown)
 
         layout.addWidget(self.wallColorLabel)
-        layout.addWidget(self.wallColor)
+        layout.addWidget(self.wallColorSelect)
+        # layout.addWidget(self.wallColor)
 
         layout.addWidget(self.outputLabel)
         layout.addWidget(self.output)
@@ -187,11 +203,13 @@ class Form(QDialog):
         lastUsed['depth'] = self.d.text()
         lastUsed['renderer'] = self.renderer.currentText()
         lastUsed['frameType'] = self.frameDropdown.currentText()
-        lastUsed['wallColor'] = self.wallColor.text()
+        lastUsed['wallColor'] = self.wallColorSelect.currentText()
         lastUsed['output'] = self.output.text()
         lastUsed['outputHeight'] = self.outputHeight.text()
         lastUsed['outputWidth'] = self.outputWidth.text()
         lastUsed['openWhenFinished'] = self.openWhenFinished.isChecked()
+        lastUsed['renderDevice'] = self.renderDevice.currentText()
+
         print('Setting last used values in prefs file')
         prefs.setLastUsed(lastUsed)
 
@@ -200,17 +218,24 @@ class Form(QDialog):
             print("Please pick a legitimate frame type")
             return
         a = args.RenderArgs()
-        a.image = self.image.text()    
-        a.width = self.w.text() 
-        a.height = self.h.text() 
-        a.depth = self.d.text() 
-        a.renderer = self.renderer.currentText() 
-        a.frameType = self.frameDropdown.currentText() 
-        a.wallColor = self.wallColor.text() 
+        a.image = self.image.text()
+        a.width = self.w.text()
+        a.height = self.h.text()
+        a.depth = self.d.text()
+        a.renderer = self.renderer.currentText()
+        a.frameType = self.frameDropdown.currentText()
+        wallColor = self.wallColorSelect.currentText()
+
+        if(wallColor in fr.colorDict):
+            print('Converting preset ' + wallColor + ' to ' + fr.colorDict[wallColor])
+            wallColor = fr.colorDict[wallColor]
+
+        a.wallColor = wallColor
         a.output = self.output.text()
         a.outputWidth = self.outputWidth.text()
         a.outputHeight = self.outputHeight.text()
         a.openWhenFinished = self.openWhenFinished.isChecked()
+        a.renderDevice = self.renderDevice.currentText()
         invokeRender.render(a)
 
 def showRenderWindow():
