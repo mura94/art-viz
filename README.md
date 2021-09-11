@@ -5,11 +5,11 @@ Preview your art in different frames with photorealistic simulated light and phy
 > This repository is in active development. Check again in the future for future developments.
 
 - [art-viz 🖼️](#art-viz-️)
-  - [Usage](#usage)
+  - [Usage ℹ️](#usage-ℹ️)
     - [Example](#example)
-  - [Dependencies](#dependencies)
-  - [Development](#development)
-  - [Args](#args)
+  - [Dependencies 🔗](#dependencies-)
+  - [Development 🛠️](#development-️)
+  - [Args ⚙️](#args-️)
     - [Blender Command Line Args](#blender-command-line-args)
     - [Image Path](#image-path)
     - [Width](#width)
@@ -23,10 +23,10 @@ Preview your art in different frames with photorealistic simulated light and phy
     - [Output Width](#output-width)
     - [Output Height](#output-height)
     - [Render Device](#render-device)
-  - [Qt Interface 🐍](#qt-interface-)
-  - [Tips](#tips)
+  - [Qt Interface 📦](#qt-interface-)
+  - [Tips ❕](#tips-)
 
-## Usage
+## Usage ℹ️
 
  `blender -b <filename> -P <this_script> -- [--image or -I] <image-path> [--width or -W] <width-inches> [--height or -H] <height-inches> [--depth or -D] <depth-inches> [--renderer or -R] <renderer> [--frameType or -FT] <frame-type> [--wallColor or -WC] <wall-color-hex> --output <output-file-name>`
 
@@ -44,7 +44,7 @@ blender -b art-viz.blend -P render.py -- -I peaches.png -W 24 -H 18 -D .5 -R  CY
 
 [:arrow_up: Back to Top](#top)
 
-## Dependencies
+## Dependencies 🔗
 
 - Blender 2.8+
 - Local Blender executable folder **must** be added to PATH to invoke `$ blender`
@@ -54,7 +54,7 @@ blender -b art-viz.blend -P render.py -- -I peaches.png -W 24 -H 18 -D .5 -R  CY
   - Only required if you want to use the optional args input interface
   - Install with `pip install pyside6`
 
-## Development
+## Development 🛠️
 
 - [x] Render scene via command line
 
@@ -88,7 +88,7 @@ blender -b art-viz.blend -P render.py -- -I peaches.png -W 24 -H 18 -D .5 -R  CY
 
 [:arrow_up: Back to Top](#top)
 
-## Args
+## Args ⚙️
 
 ### Blender Command Line Args
 
@@ -250,7 +250,7 @@ The desired render device type. Options are `GPU` or `CPU`
 
 Optional. Defaults to `GPU`
 
-## Qt Interface 🐍
+## Qt Interface 📦
 
 For convenience, I've added a script that will display a user interface for faster argument input and editing. If you would like, you can run the script `RenderArgsQt.py`. PySide6 **must** be installed (you can install via `pip install pyside6`).
 
@@ -262,7 +262,7 @@ python renderQt.py
 
 <img title="" src = "assets/qt_demo.PNG" alt= "qtdemo" width="256" data-align="inline">
 
-## Tips
+## Tips ❕
 
 - If the result is too small, double the size values (height/width/depth) to make the art appear larger in the final image
 - When testing out new wall colors, speed up render times using `BLENDER_EEVEE` instead of the longer (but better quality) `CYCLES`
