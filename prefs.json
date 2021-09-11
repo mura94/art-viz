@@ -1,17 +1,17 @@
 {
     "lastUsed": {
         "depth": ".1",
-        "frameType": "ClassicFrameMattedMetalBlack",
-        "height": "5",
-        "image": "sunset.jpg",
-        "openWhenFinished": true,
-        "output": "render-output.png",
-        "outputHeight": "1024",
-        "outputWidth": "1024",
+        "frameType": "SharpMattedFrameBlackMetal",
+        "height": "13",
+        "image": "peaches.png",
+        "openWhenFinished": false,
+        "output": "assets/frames/SharpMattedFrameBlackMetal.png",
+        "outputHeight": "512",
+        "outputWidth": "512",
         "renderDevice": "GPU",
         "renderer": "CYCLES",
         "wallColor": "Default",
-        "width": "7"
+        "width": "10"
     },
     "savedProfiles": [
         {

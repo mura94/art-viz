@@ -195,7 +195,7 @@ Current `frameType` options are:
 |`ClassicFrameMattedMetalGold`   | <img title="" src = "assets/frames/ClassicFrameMattedMetalGold.png" alt= "ClassicFrameMattedMetalGold" width="128" data-align="inline"> |
 |`ClassicFrameMattedWashedWhite`   | <img title="" src = "assets/frames/ClassicFrameMattedWashedWhite.png" alt= "ClassicFrameMattedWashedWhite" width="128" data-align="inline"> |
 |`ClassicFrameMattedWashedBlack`   | <img title="" src = "assets/frames/ClassicFrameMattedWashedBlack.png" alt= "ClassicFrameMattedWashedBlack" width="128" data-align="inline"> |
-
+|`SharpMattedFrameBlackMetal`   | <img title="" src = "assets/frames/SharpMattedFrameBlackMetal.png" alt= "SharpMattedFrameBlackMetal" width="128" data-align="inline"> |
 
 > :exclamation: This list will be updated as I create more frame models!
 

@@ -40,6 +40,8 @@ def getFrameList():
     l.append('ClassicFrameMattedMetalSilver')
     l.append('ClassicFrameMattedMetalGold')
 
+    l.append('- - - Thin Metal Frames - - -')
+    l.append('SharpMattedFrameBlackMetal')
     return l
 
 def getRenderersList():
