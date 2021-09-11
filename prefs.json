@@ -1,17 +1,17 @@
 {
     "lastUsed": {
         "depth": ".1",
-        "frameType": "ClassicFrameMattedWalnut",
-        "height": "12",
-        "image": "peaches.png",
-        "openWhenFinished": false,
+        "frameType": "ClassicFrameMattedMetalBlack",
+        "height": "5",
+        "image": "sunset.jpg",
+        "openWhenFinished": true,
         "output": "render-output.png",
         "outputHeight": "1024",
         "outputWidth": "1024",
-        "renderDevice": "CPU",
-        "renderer": "BLENDER_EEVEE",
+        "renderDevice": "GPU",
+        "renderer": "CYCLES",
         "wallColor": "Default",
-        "width": "9"
+        "width": "7"
     },
     "savedProfiles": [
         {

@@ -60,10 +60,10 @@ def doRender(args):
         bpy.context.scene.render.engine = renderer
 
         # Setup cycles to use GPU compute (comment out if using CPU compute)
-        if(renderer == "CYCLES"):
-            bpy.context.scene.render.engine = 'CYCLES' 
-            bpy.data.scenes["Scene"].cycles.device = renderDevice
-            bpy.context.scene.cycles.device = renderDevice
+        # if(renderer == "CYCLES"):
+        #     bpy.context.scene.render.engine = 'CYCLES' 
+        #     bpy.data.scenes["Scene"].cycles.device = renderDevice
+        #     bpy.context.scene.cycles.device = renderDevice
 
         # Set dimensions using an armature
         bpy.context.view_layer.objects.active = bpy.data.objects['Sizer']
