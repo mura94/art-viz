@@ -32,9 +32,20 @@ Preview your art in different frames with photorealistic simulated light and phy
 
 ### Example
 
+**Simple:**
+
 ```bash
-blender -b art-viz.blend -P render.py -- -I peaches.png -W 24 -H 18 -D .5 -R  CYCLES -FT ClassicFrameMattedWalnut -WC E4DED5 --output peaches_output.png
+blender -b art-viz.blend -P render.py -- -I peaches.png -W 9 -H 12 -D .1 -R CYCLES
 ```
+
+**Full:**
+
+```bash
+blender -b art-viz.blend -P render.py -- -I peaches.png -W 9 -H 12 -D .1 -R  CYCLES -FT ClassicFrameMattedWalnut -WC E4DED5 --output peaches_output.png -OW 1024 -OH 1024 -RD GPU
+```
+
+> :grey_exclamation: Note: For an easier and cleaner user experience, use the [Qt tool](#-qt-interface) instead of the command line
+
 
 |Input |Output       |
 |---      |---          |
