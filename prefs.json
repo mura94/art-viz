@@ -1,17 +1,17 @@
 {
     "lastUsed": {
         "depth": ".1",
-        "frameType": "SharpMattedFrameBlackMetal",
-        "height": "5",
-        "image": "sunset.jpg",
-        "openWhenFinished": true,
-        "output": "render-output.png",
+        "frameType": "NielsenMattedFrameBlackMetal",
+        "height": "12",
+        "image": "peaches.png",
+        "openWhenFinished": false,
+        "output": "peaches-output.png",
         "outputHeight": "1024",
         "outputWidth": "1024",
         "renderDevice": "GPU",
         "renderer": "CYCLES",
         "wallColor": "Default",
-        "width": "7"
+        "width": "9"
     },
     "savedProfiles": [
         {

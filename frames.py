@@ -40,8 +40,24 @@ def getFrameList():
     l.append('ClassicFrameMattedMetalSilver')
     l.append('ClassicFrameMattedMetalGold')
 
-    l.append('- - - Thin Metal Frames - - -')
-    l.append('SharpMattedFrameBlackMetal')
+
+    l.append('- - - Modern Frames - - -')
+    l.append('ModernMattedFrameBlack')
+    l.append('ModernMattedFrameWhite')
+    l.append('ModernMattedFrameCherry')
+    l.append('ModernMattedFrameEspresso')
+    l.append('ModernMattedFrameMaple')
+    l.append('ModernMattedFrameWalnut')
+    l.append('ModernMattedFrameWashedWhite')
+    l.append('ModernMattedFrameWashedBlack')
+    l.append('ModernMattedFrameMetalBlack')
+    l.append('ModernMattedFrameMetalSilver')
+    l.append('ModernMattedFrameMetalGold')
+
+    l.append('- - - Nielsen Frames - - -')
+    l.append('NielsenMattedFrameBlackMetal')
+    l.append('NielsenSharpMattedFrameBlackMetal')
+
     return l
 
 def getRenderersList():

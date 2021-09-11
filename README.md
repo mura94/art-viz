@@ -195,7 +195,20 @@ Current `frameType` options are:
 |`ClassicFrameMattedMetalGold`   | <img title="" src = "assets/frames/ClassicFrameMattedMetalGold.png" alt= "ClassicFrameMattedMetalGold" width="128" data-align="inline"> |
 |`ClassicFrameMattedWashedWhite`   | <img title="" src = "assets/frames/ClassicFrameMattedWashedWhite.png" alt= "ClassicFrameMattedWashedWhite" width="128" data-align="inline"> |
 |`ClassicFrameMattedWashedBlack`   | <img title="" src = "assets/frames/ClassicFrameMattedWashedBlack.png" alt= "ClassicFrameMattedWashedBlack" width="128" data-align="inline"> |
-|`SharpMattedFrameBlackMetal`   | <img title="" src = "assets/frames/SharpMattedFrameBlackMetal.png" alt= "SharpMattedFrameBlackMetal" width="128" data-align="inline"> |
+|`ModernMattedFrameBlack`   | <img title="" src = "assets/frames/ModernMattedFrameBlack.png" alt= "ModernMattedFrameBlack" width="128" data-align="inline"> |
+|`ModernMattedFrameWhite`   | <img title="" src = "assets/frames/ModernMattedFrameWhite.png" alt= "ModernMattedFrameWhite" width="128" data-align="inline"> |
+|`ModernMattedFrameCherry`   | <img title="" src = "assets/frames/ModernMattedFrameCherry.png" alt= "ModernMattedFrameCherry" width="128" data-align="inline"> |
+|`ModernMattedFrameEspresso`   | <img title="" src = "assets/frames/ModernMattedFrameEspresso.png" alt= "ModernMattedFrameEspresso" width="128" data-align="inline"> |
+|`ModernMattedFrameMaple`   | <img title="" src = "assets/frames/ModernMattedFrameMaple.png" alt= "ModernMattedFrameMaple" width="128" data-align="inline"> |
+|`ModernMattedFrameWalnut`   | <img title="" src = "assets/frames/ModernMattedFrameWalnut.png" alt= "ModernMattedFrameWalnut" width="128" data-align="inline"> |
+|`ModernMattedFrameMetalBlack`   | <img title="" src = "assets/frames/ModernMattedFrameMetalBlack.png" alt= "ModernMattedFrameMetalBlack" width="128" data-align="inline"> |
+|`ModernMattedFrameMetalSilver`   | <img title="" src = "assets/frames/ModernMattedFrameMetalSilver.png" alt= "ModernMattedFrameMetalSilver" width="128" data-align="inline"> |
+|`ModernMattedFrameMetalGold`   | <img title="" src = "assets/frames/ModernMattedFrameMetalGold.png" alt= "ModernMattedFrameMetalGold" width="128" data-align="inline"> |
+|`ModernMattedFrameWashedWhite`   | <img title="" src = "assets/frames/ModernMattedFrameWashedWhite.png" alt= "ModernMattedFrameWashedWhite" width="128" data-align="inline"> |
+|`ModernMattedFrameWashedBlack`   | <img title="" src = "assets/frames/ModernMattedFrameWashedBlack.png" alt= "ModernMattedFrameWashedBlack" width="128" data-align="inline"> |
+|`NielsenMattedFrameBlackMetal`   | <img title="" src = "assets/frames/NielsenMattedFrameBlackMetal.png" alt= "NielsenFrameMattedBlackMetal" width="128" data-align="inline"> |
+|`NielsenSharpMattedFrameBlackMetal`   | <img title="" src = "assets/frames/NielsenSharpMattedFrameBlackMetal.png" alt= "NielsenSharpMattedFrameBlackMetal" width="128" data-align="inline"> |
+
 
 > :exclamation: This list will be updated as I create more frame models!
 
