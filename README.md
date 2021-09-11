@@ -42,7 +42,7 @@ blender -b art-viz.blend -P render.py -- -I peaches.png -W 24 -H 18 -D .5 -R  CY
 
 *More frames will be added in future updates soon!*
 
-[:arrow_up: Back to Top](#art-viz)
+[:arrow_up: Back to Top](#top)
 
 ## Dependencies
 
@@ -86,7 +86,7 @@ blender -b art-viz.blend -P render.py -- -I peaches.png -W 24 -H 18 -D .5 -R  CY
 
 - [ ] Control lighting via args or json
 
-[:arrow_up: Back to Top](#art-viz)
+[:arrow_up: Back to Top](#top)
 
 ## Args
 
@@ -267,4 +267,4 @@ python renderQt.py
 - If the result is too small, double the size values (height/width/depth) to make the art appear larger in the final image
 - When testing out new wall colors, speed up render times using `BLENDER_EEVEE` instead of the longer (but better quality) `CYCLES`
 
-[:arrow_up: Back to Top](#art-viz)
+[:arrow_up: Back to Top](#top)
