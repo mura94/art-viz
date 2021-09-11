@@ -263,7 +263,9 @@ Optional. Defaults to `GPU`
 
 ## 🎁 Qt Interface
 
-For convenience, I've added a script that will display a user interface for faster argument input and editing. If you would like, you can run the script `RenderArgsQt.py`. PySide6 **must** be installed (you can install via `pip install pyside6`).
+For convenience, I've added a script that will display a user interface for faster argument input and editing. If you would like, you can run the script `RenderArgsQt.py`. PySide6 **must** be installed
+
+  - Install with `pip install pyside6`
 
 Run in the repository root directory with:
 
