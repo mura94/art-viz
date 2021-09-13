@@ -1,17 +1,17 @@
 {
     "lastUsed": {
         "depth": ".2",
-        "frameType": "NielsenMattedFrameBlackMetal",
+        "frameType": "BlackFloatingFrame",
         "height": "12",
-        "image": "peaches.png",
-        "openWhenFinished": true,
-        "output": "peaches-output.png",
-        "outputHeight": "1024",
-        "outputWidth": "1024",
+        "image": "rainy-bay-01.jpg",
+        "openWhenFinished": false,
+        "output": "render-output.png",
+        "outputHeight": "512",
+        "outputWidth": "512",
         "renderDevice": "GPU",
         "renderer": "CYCLES",
-        "wallColor": "Default",
-        "width": "9"
+        "wallColor": "Deep Sea",
+        "width": "12"
     },
     "savedProfiles": [
         {
