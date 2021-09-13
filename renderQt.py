@@ -7,6 +7,7 @@ from PySide6 import QtGui
 import subprocess
 import frames as fr
 import prefs
+import glob
 import args
 import invokeRender
 
@@ -88,6 +89,13 @@ class Form(QDialog):
         super(Form, self).__init__(parent)
 
         self.setStyleSheet(style)
+
+        blendFiles = glob.glob('*.blend')
+
+        self.blendLabel = QLabel("Blender File")
+        self.blend = QComboBox()
+        self.blend.addItems(blendFiles)
+        self.blend.setEditable(True)
                             
         self.imgLabel = QLabel("Image")
         self.image = QLineEdit(lastUsed['image'])
@@ -144,6 +152,9 @@ class Form(QDialog):
         self.openWhenFinished.setChecked(bool(lastUsed['openWhenFinished']))
 
         layout = QVBoxLayout()
+
+        layout.addWidget(self.blendLabel)
+        layout.addWidget(self.blend)
 
         layout.addWidget(self.imgLabel)
         layout.addWidget(self.image)
@@ -209,6 +220,7 @@ class Form(QDialog):
         lastUsed['outputWidth'] = self.outputWidth.text()
         lastUsed['openWhenFinished'] = self.openWhenFinished.isChecked()
         lastUsed['renderDevice'] = self.renderDevice.currentText()
+        lastUsed['blend'] = self.blend.currentText()
 
         print('Setting last used values in prefs file')
         prefs.setLastUsed(lastUsed)
@@ -236,6 +248,7 @@ class Form(QDialog):
         a.outputHeight = self.outputHeight.text()
         a.openWhenFinished = self.openWhenFinished.isChecked()
         a.renderDevice = self.renderDevice.currentText()
+        a.blend = self.blend.currentText()
         invokeRender.render(a)
 
 def showRenderWindow():

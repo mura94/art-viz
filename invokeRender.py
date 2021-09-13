@@ -8,9 +8,9 @@ import unittest
 
 currentDir = os.path.dirname(os.path.abspath(__file__)) + '/'
 
-bashCommand = "blender -b " + currentDir + "art-viz.blend -P " + currentDir + "render.py   -- "
 
 def render(args):
+    bashCommand = "blender -b " + currentDir + args.blend + " -P " + currentDir + "render.py   -- " 
     s = bashCommand + '-I' + currentDir + args.image
     s +=  ' -W ' + str(args.width)
     s +=  ' -H ' + str(args.height)

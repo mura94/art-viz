@@ -1,20 +1,22 @@
 {
     "lastUsed": {
-        "depth": ".2",
-        "frameType": "BlackFloatingFrame",
+        "blend": "art-viz-livingroom.blend",
+        "depth": ".1",
+        "frameType": "ClassicFrameMattedWalnut",
         "height": "12",
-        "image": "rainy-bay-01.jpg",
+        "image": "avocado.png",
         "openWhenFinished": false,
         "output": "render-output.png",
         "outputHeight": "512",
         "outputWidth": "512",
         "renderDevice": "GPU",
         "renderer": "CYCLES",
-        "wallColor": "Deep Sea",
+        "wallColor": "Fiji",
         "width": "12"
     },
     "savedProfiles": [
         {
+            "blend": "art-viz.blend",
             "depth": ".5",
             "frameType": "BlackFloatingFrame",
             "height": "18",

@@ -2,6 +2,7 @@ import renderQt as qt
 
 class RenderArgs():
     def __init__(self, parent=None):
+        self.blend = 'art-viz.blend'
         self.image = 'peaches.png'
         self.width = 9
         self.height = 12
