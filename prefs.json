@@ -7,11 +7,11 @@
         "image": "avocado.png",
         "openWhenFinished": false,
         "output": "render-output.png",
-        "outputHeight": "512",
-        "outputWidth": "512",
+        "outputHeight": "1080",
+        "outputWidth": "1920",
         "renderDevice": "GPU",
         "renderer": "CYCLES",
-        "wallColor": "Fiji",
+        "wallColor": "505050",
         "width": "12"
     },
     "savedProfiles": [
