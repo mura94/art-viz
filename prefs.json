@@ -1,18 +1,18 @@
 {
     "lastUsed": {
         "blend": "art-viz-livingroom.blend",
-        "depth": ".1",
-        "frameType": "ClassicFrameMattedWalnut",
-        "height": "12",
-        "image": "avocado.png",
+        "depth": "0.50",
+        "frameType": "MetalFloatingFrameGold",
+        "height": "24",
+        "image": "rock-face-05_highcontrast.PNG",
         "openWhenFinished": false,
         "output": "render-output.png",
-        "outputHeight": "1080",
-        "outputWidth": "1920",
+        "outputHeight": "512",
+        "outputWidth": "512",
         "renderDevice": "GPU",
         "renderer": "CYCLES",
-        "wallColor": "505050",
-        "width": "12"
+        "wallColor": "Default",
+        "width": "24"
     },
     "savedProfiles": [
         {

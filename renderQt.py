@@ -1,7 +1,7 @@
 import os
 from os import curdir, pipe
 import sys
-from PySide6.QtWidgets import (QAbstractButton, QCheckBox, QComboBox, QFileDialog, QLabel, QLineEdit, QPushButton, QApplication, QRadioButton, QToolButton,
+from PySide6.QtWidgets import (QAbstractButton, QCheckBox, QComboBox, QFileDialog, QLabel, QLineEdit, QPushButton, QApplication, QRadioButton, QSpinBox, QToolButton, QDoubleSpinBox,
     QVBoxLayout, QDialog)    
 from PySide6 import QtGui
 import subprocess
@@ -74,6 +74,14 @@ style = ("QPushButton { background-color: %s;"
                             "color: %s;"
                             "}"
 
+                            "QSpinBox {"
+                            "color: #DBEDF3;"
+                            "}"
+
+                            "QDoubleSpinBox {"
+                            "color: #DBEDF3;"
+                            "}"
+
                             "QWidget {"
                             "background-color: %s;"
                             "}"
@@ -90,24 +98,44 @@ class Form(QDialog):
 
         self.setStyleSheet(style)
 
-        blendFiles = glob.glob('*.blend')
 
         self.blendLabel = QLabel("Blender File")
         self.blend = QComboBox()
-        self.blend.addItems(blendFiles)
+        # blendFiles = glob.glob('*.blend')
+        # self.blend.addItems(blendFiles)
         self.blend.setEditable(True)
                             
         self.imgLabel = QLabel("Image")
-        self.image = QLineEdit(lastUsed['image'])
+        self.image = QComboBox()
+        self.image.setEditable(True)
+        self.image.addItem(lastUsed['image'])
+        
+
+        self.imgFiles = []
+        self.refreshFileLists()
+        self.refreshButton = QPushButton("Refresh Lists")
+        self.refreshButton.clicked.connect(self.refreshFileLists)
+
+        # extensions = ('*.png', '*.jpg', '*.jpeg', '*.PNG')
+        # for extension in extensions:
+        #     imgFiles.extend(glob.glob(extension))
+        
+        # if(lastUsed['image'] in imgFiles):
+        #     imgFiles.remove(lastUsed['image'])
+        
+        # self.image.addItems(self.imgFiles)
 
         self.widthLabel = QLabel("Width")
-        self.w = QLineEdit(lastUsed['width'])
+        self.w = QSpinBox()
+        self.w.setValue(int(lastUsed['width']))
 
         self.heightLabel = QLabel("Height")
-        self.h = QLineEdit(lastUsed['height'])
+        self.h = QSpinBox()
+        self.h.setValue(int(lastUsed['height']))
 
         self.depthLabel = QLabel("Depth")
-        self.d = QLineEdit(lastUsed['depth'])
+        self.d = QDoubleSpinBox()
+        self.d.setValue(float(lastUsed['depth']))
 
         self.rendererLabel = QLabel("Renderer")
         self.renderer = QComboBox()
@@ -194,6 +222,7 @@ class Form(QDialog):
 
         layout.addWidget(self.button)
         layout.addWidget(self.openButton)
+        layout.addWidget(self.refreshButton)
 
         self.setLayout(layout)
 
@@ -206,9 +235,26 @@ class Form(QDialog):
         print('opening ' + currentDir + self.output.text())
         os.startfile(currentDir + self.output.text())
 
+    def refreshFileLists(self):
+        self.imgFiles = []
+        extensions = ('*.png', '*.jpg', '*.jpeg', '*.PNG')
+        for extension in extensions:
+            self.imgFiles.extend(glob.glob(extension))
+        
+        self.image.clear()
+        self.image.addItems(self.imgFiles)
+        if(lastUsed['image'] in self.imgFiles):
+            self.image.setCurrentIndex(self.imgFiles.index(lastUsed['image']))
+
+        blendFiles = glob.glob('*.blend')
+        self.blend.clear()
+        self.blend.addItems(blendFiles)
+        if(lastUsed['blend'] in blendFiles):
+            self.blend.setCurrentIndex(blendFiles.index(lastUsed['blend']))
+
  
     def setLastUsedValues(self):
-        lastUsed['image'] = self.image.text()
+        lastUsed['image'] = self.image.currentText()
         lastUsed['width'] = self.w.text()
         lastUsed['height'] = self.h.text()
         lastUsed['depth'] = self.d.text()
@@ -230,7 +276,7 @@ class Form(QDialog):
             print("Please pick a legitimate frame type")
             return
         a = args.RenderArgs()
-        a.image = self.image.text()
+        a.image = self.image.currentText()
         a.width = self.w.text()
         a.height = self.h.text()
         a.depth = self.d.text()

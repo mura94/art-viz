@@ -83,5 +83,6 @@ colorDict = {
     'Sioux': '80968F',
     'Deep': '265557',
     'Lazy': '5F90B7',
-    'Stunning': '424B63'
+    'Stunning': '424B63',
+    'Charcoal': '505050'
 }
