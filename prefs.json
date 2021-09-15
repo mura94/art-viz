@@ -5,13 +5,13 @@
         "frameType": "MetalFloatingFrameGold",
         "height": "24",
         "image": "rock-face-05_highcontrast.PNG",
-        "openWhenFinished": false,
-        "output": "render-output.png",
+        "openWhenFinished": true,
+        "output": "assets/art-viz-livingroom-rockface.png",
         "outputHeight": "512",
         "outputWidth": "512",
         "renderDevice": "GPU",
         "renderer": "CYCLES",
-        "wallColor": "Default",
+        "wallColor": "Charcoal",
         "width": "24"
     },
     "savedProfiles": [

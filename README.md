@@ -24,6 +24,8 @@ Preview your art in different frames with photorealistic simulated light and phy
     - [Output Height](#output-height)
     - [Render Device](#render-device)
   - [🎁 Qt Interface](#-qt-interface)
+  - [Blender File](#blender-file)
+    - [Customize Your Own Environment](#customize-your-own-environment)
   - [❕ Tips](#-tips)
 
 ## ⌨️ Usage
@@ -93,7 +95,7 @@ blender -b art-viz.blend -P render.py -- -I peaches.png -W 9 -H 12 -D .1 -R  CYC
 
 - [ ] Arg to save & load certain arg values as default prefs
 
-- [ ] Activate decor objects via args & json
+- [x] Choose custom environments via arg
 
 - [ ] Control lighting via args or json
 
@@ -281,6 +283,26 @@ For convenience, I've added a script that will display a user interface for fast
   - Install with `pip install pyside6`
 
 Run in the repository root directory with:
+
+## Blender File
+
+I've added a field to the top of the Qt called Blend File, which selects the blender file in which it will be running the render script and args. 
+
+You can still set the wall color, frame type, etc in each environment as in the examples below.
+
+Here are the current options:
+
+|File Name  |Example  |
+|---        |---      |
+|`art-viz.blend`  |<img title="" src = "peaches-output.png" alt= "peaches-output" width="256" data-align="inline">|
+|`art-viz-livingroom.blend` |<img title="" src = "assets/environments/art-viz-livingroom-rockface.png" alt= "livingroom" width="256" data-align="inline">|
+|`art-viz-staircase.blend`  |<img title="" src = "assets/environments/art-viz-staircase-avocado.png" alt= "staircase" width="256" data-align="inline">|
+
+### Customize Your Own Environment
+
+You can even use your own .blend files in art-viz by including the file in the root path of the repository and importing the necessary objects with `File>Append>art-viz-staircase.blend>Collections>art-viz`, which will bring the frames, camera, and canvas into the scene.
+
+>Note: You may need an object named "Wall" in the scene as well, with a material named "Wall" applied to that object. This will be fixed in future iterations.
 
 ```bash
 python renderQt.py
