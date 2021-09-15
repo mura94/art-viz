@@ -1,18 +1,18 @@
 {
     "lastUsed": {
-        "blend": "art-viz-livingroom.blend",
-        "depth": "0.50",
-        "frameType": "MetalFloatingFrameGold",
-        "height": "24",
-        "image": "rock-face-05_highcontrast.PNG",
-        "openWhenFinished": true,
-        "output": "assets/art-viz-livingroom-rockface.png",
-        "outputHeight": "512",
-        "outputWidth": "512",
+        "blend": "art-viz.blend",
+        "depth": "0.10",
+        "frameType": "NielsenMattedFrameBlackMetal",
+        "height": "5",
+        "image": "cliff.jpg",
+        "openWhenFinished": false,
+        "output": "cliff-output.png",
+        "outputHeight": "1024",
+        "outputWidth": "1024",
         "renderDevice": "GPU",
         "renderer": "CYCLES",
-        "wallColor": "Charcoal",
-        "width": "24"
+        "wallColor": "Default",
+        "width": "7"
     },
     "savedProfiles": [
         {
