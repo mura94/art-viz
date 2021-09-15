@@ -24,7 +24,7 @@ Preview your art in different frames with photorealistic simulated light and phy
     - [Output Height](#output-height)
     - [Render Device](#render-device)
   - [🎁 Qt Interface](#-qt-interface)
-  - [Blender File](#blender-file)
+  - [Blender File (Environment)](#blender-file-environment)
     - [Customize Your Own Environment](#customize-your-own-environment)
   - [❕ Tips](#-tips)
 
@@ -284,9 +284,9 @@ For convenience, I've added a script that will display a user interface for fast
 
 Run in the repository root directory with:
 
-## Blender File
+## Blender File (Environment)
 
-I've added a field to the top of the Qt called Blend File, which selects the blender file in which it will be running the render script and args. 
+I've added a field to the top of the Qt called 'Blender File', which selects the blender file in which it will be running the render script and args. This essentially just updates the .blend file path in the render command.
 
 You can still set the wall color, frame type, etc in each environment as in the examples below.
 
