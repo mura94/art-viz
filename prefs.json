@@ -1,18 +1,18 @@
 {
     "lastUsed": {
-        "blend": "art-viz.blend",
-        "depth": "0.10",
-        "frameType": "NielsenMattedFrameBlackMetal",
-        "height": "5",
-        "image": "cliff.jpg",
+        "blend": "art-viz-livingroom.blend",
+        "depth": "0.50",
+        "frameType": "BlackFloatingFrame",
+        "height": "24",
+        "image": "untitled.jpg",
         "openWhenFinished": false,
-        "output": "cliff-output.png",
-        "outputHeight": "1024",
-        "outputWidth": "1024",
+        "output": "untitled-output.png",
+        "outputHeight": "512",
+        "outputWidth": "512",
         "renderDevice": "GPU",
         "renderer": "CYCLES",
         "wallColor": "Default",
-        "width": "7"
+        "width": "24"
     },
     "savedProfiles": [
         {

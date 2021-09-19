@@ -64,8 +64,11 @@ blender -b art-viz.blend -P render.py -- -I peaches.png -W 9 -H 12 -D .1 -R  CYC
 - Python 3.8.2+
   - Must be added to PATH to invoke `$ python`
 - PySide6
-  - Only required if you want to use the optional args input interface
+  - Only required if you want to use the optional Qt interface
   - Install with `pip install pyside6`
+- Fetch
+  - Only required if you want to use the optional Qt interface
+  - Install with `pip install fetch`
 
 ## 🛠️ Development
 
@@ -98,6 +101,8 @@ blender -b art-viz.blend -P render.py -- -I peaches.png -W 9 -H 12 -D .1 -R  CYC
 - [x] Choose custom environments via arg
 
 - [ ] Control lighting via args or json
+
+- [ ] Create executable to run Qt interface
 
 [:arrow_up: Back to Top](#top)
 
