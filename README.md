@@ -215,7 +215,7 @@ Current `frameType` options are:
 |`ModernMattedFrameWashedBlack`   | <img title="" src = "assets/frames/ModernMattedFrameWashedBlack.png" alt= "ModernMattedFrameWashedBlack" width="128" data-align="inline"> |
 |`NielsenMattedFrameBlackMetal`   | <img title="" src = "assets/frames/NielsenMattedFrameBlackMetal.png" alt= "NielsenFrameMattedBlackMetal" width="128" data-align="inline"> |
 |`NielsenSharpMattedFrameBlackMetal`   | <img title="" src = "assets/frames/NielsenSharpMattedFrameBlackMetal.png" alt= "NielsenSharpMattedFrameBlackMetal" width="128" data-align="inline"> |
-
+|`NielsenFloatingFrameBlackMetal`   | <img title="" src = "assets/frames/NielsenFloatingFrameBlackMetal.png" alt= "NielsenFloatingFrameBlackMetal" width="128" data-align="inline"> |
 
 > :exclamation: This list will be updated as I create more frame models!
 
