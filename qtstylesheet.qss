@@ -1,0 +1,64 @@
+QPushButton { background-color: #283149;
+                            border-radius: 3px;
+                            border-color: #DBEDF3;
+                            border-style: none;
+                            border-width: 2px;
+                            color: #DBEDF3;
+                            padding: 4px
+                            }
+
+                            QPushButton:!hover { background-color: #283149; border-style: none; }
+                            QPushButton:hover { background-color: #00818A; border-style: none; }
+                            QPushButton:pressed { background-color: #DBEDF3; border-style: none; color: black}
+
+                            QLineEdit {
+                            border: 1px solid gray;
+                            border-radius: 3px;
+                            padding: 0 2px;
+                            background: #DBEDF3;
+                            selection-background-color: %s;
+                            color: #DBEDF3;
+                            }
+
+                            QMainWindow {
+                            background: %s;
+                            width: 10px;
+                            height: 10px;
+                            }
+
+                            QLineEdit:hover {
+                            background: #283149;
+                            }
+
+                            QComboBox {
+                            border: 1px solid %s;
+                            border-radius: 2px;
+                            background-color: %s;
+                            color: #DBEDF3;
+                            }
+
+                            QComboBox QAbstractItemView {
+                            color: #DBEDF3;
+                            selection-background-color: #00818A;
+                            }
+
+                            QLabel {
+                            font-weight: bold;
+                            color: %s;
+                            }
+
+                            QSpinBox {
+                            color: #DBEDF3;
+                            }
+
+                            QDoubleSpinBox {
+                            color: #DBEDF3;
+                            }
+
+                            QWidget {
+                            background-color: %s;
+                            }
+
+                            QRadioButton {
+                            color: #DBEDF3;
+                            }

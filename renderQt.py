@@ -2,7 +2,7 @@ import os
 from os import curdir, pipe
 import sys
 from PySide6.QtWidgets import (QAbstractButton, QCheckBox, QComboBox, QFileDialog, QLabel, QLineEdit, QPushButton, QApplication, QRadioButton, QSpinBox, QToolButton, QDoubleSpinBox,
-    QVBoxLayout, QDialog)    
+    QVBoxLayout, QDialog, QHBoxLayout)    
 from PySide6 import QtGui
 import subprocess
 import frames as fr
@@ -23,26 +23,24 @@ lightColor = '#DBEDF3'
 medColor = '#404B69'
 darkColor = '#283149'
 
-textColor = lightColor
-
-style = ("QPushButton { background-color: %s;"
+style = ("QPushButton { background-color: #283149;"
                             "border-radius: 3px;"
-                            "border-color: %s;"
+                            "border-color: #DBEDF3;"
                             "border-style: none;"
                             "border-width: 2px;"
-                            "color: %s;"
+                            "color: #DBEDF3;"
                             "padding: 4px"
                             "}" 
 
                             "QPushButton:!hover { background-color: #283149; border-style: none; }"
                             "QPushButton:hover { background-color: #00818A; border-style: none; }"
-                            "QPushButton:pressed { background-color: %s; border-style: none; color: black}"
+                            "QPushButton:pressed { background-color: #DBEDF3; border-style: none; color: black}"
 
                             "QLineEdit {"
                             "border: 1px solid gray;"
                             "border-radius: 3px;"
                             "padding: 0 2px;"
-                            "background: %s;"
+                            "background: #DBEDF3;"
                             "selection-background-color: %s;"
                             "color: #DBEDF3;"
                             "}"
@@ -89,7 +87,7 @@ style = ("QPushButton { background-color: %s;"
                             "QRadioButton {"
                             "color: #DBEDF3;"
                             "}"
-                            % (darkColor, lightColor, lightColor, lightColor, lightColor, brightColor, lightColor, 'gray', lightColor, lightColor, medColor))
+                            % (brightColor, lightColor, 'gray', lightColor, lightColor, medColor))
 
 class Form(QDialog):
 
@@ -98,11 +96,8 @@ class Form(QDialog):
 
         self.setStyleSheet(style)
 
-
         self.blendLabel = QLabel("Blender File")
         self.blend = QComboBox()
-        # blendFiles = glob.glob('*.blend')
-        # self.blend.addItems(blendFiles)
         self.blend.setEditable(True)
                             
         self.imgLabel = QLabel("Image")
@@ -110,20 +105,10 @@ class Form(QDialog):
         self.image.setEditable(True)
         self.image.addItem(lastUsed['image'])
         
-
         self.imgFiles = []
         self.refreshFileLists()
         self.refreshButton = QPushButton("Refresh Lists")
         self.refreshButton.clicked.connect(self.refreshFileLists)
-
-        # extensions = ('*.png', '*.jpg', '*.jpeg', '*.PNG')
-        # for extension in extensions:
-        #     imgFiles.extend(glob.glob(extension))
-        
-        # if(lastUsed['image'] in imgFiles):
-        #     imgFiles.remove(lastUsed['image'])
-        
-        # self.image.addItems(self.imgFiles)
 
         self.widthLabel = QLabel("Width")
         self.w = QSpinBox()
@@ -142,7 +127,6 @@ class Form(QDialog):
         renderers = fr.getRenderersList()
         self.renderer.addItems(renderers)
         self.renderer.setCurrentIndex(renderers.index(lastUsed['renderer']))
-
 
         self.renderDeviceLabel = QLabel("Render Device")
 
@@ -207,7 +191,6 @@ class Form(QDialog):
 
         layout.addWidget(self.wallColorLabel)
         layout.addWidget(self.wallColorSelect)
-        # layout.addWidget(self.wallColor)
 
         layout.addWidget(self.outputLabel)
         layout.addWidget(self.output)

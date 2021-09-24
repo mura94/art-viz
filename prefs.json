@@ -1,18 +1,18 @@
 {
     "lastUsed": {
-        "blend": "art-viz-livingroom.blend",
+        "blend": "art-viz.blend",
         "depth": "0.50",
-        "frameType": "BlackFloatingFrame",
-        "height": "24",
-        "image": "untitled.jpg",
+        "frameType": "MetalFloatingFrameBlack",
+        "height": "20",
+        "image": "UNTITLED-2.jpg",
         "openWhenFinished": false,
-        "output": "untitled-output.png",
-        "outputHeight": "512",
-        "outputWidth": "512",
+        "output": "untitled-2-output-2.png",
+        "outputHeight": "1024",
+        "outputWidth": "1024",
         "renderDevice": "GPU",
         "renderer": "CYCLES",
         "wallColor": "Default",
-        "width": "24"
+        "width": "20"
     },
     "savedProfiles": [
         {
