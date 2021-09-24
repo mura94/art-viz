@@ -40,7 +40,6 @@ def getFrameList():
     l.append('ClassicFrameMattedMetalSilver')
     l.append('ClassicFrameMattedMetalGold')
 
-
     l.append('- - - Modern Frames - - -')
     l.append('ModernMattedFrameBlack')
     l.append('ModernMattedFrameWhite')
@@ -57,6 +56,10 @@ def getFrameList():
     l.append('- - - Nielsen Frames - - -')
     l.append('NielsenMattedFrameBlackMetal')
     l.append('NielsenSharpMattedFrameBlackMetal')
+    l.append('NielsenFloatingFrameBlackMetal')
+
+    l.append('- - - ')
+    l.append('None')
 
     return l
 
