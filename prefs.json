@@ -1,18 +1,18 @@
 {
     "lastUsed": {
-        "blend": "art-viz.blend",
+        "blend": "art-viz-livingroom.blend",
         "depth": "0.50",
-        "frameType": "NielsenFloatingFrameBlackMetal",
-        "height": "12",
+        "frameType": "BlackFloatingFrame",
+        "height": "24",
         "image": "Untitled-2.jpg",
         "openWhenFinished": true,
-        "output": "assets/frames/NielsenFloatingFrameMetalBlack.png",
-        "outputHeight": "512",
-        "outputWidth": "512",
+        "output": "untitled-2-output-4.png",
+        "outputHeight": "1024",
+        "outputWidth": "1024",
         "renderDevice": "GPU",
         "renderer": "CYCLES",
-        "wallColor": "Default",
-        "width": "9"
+        "wallColor": "Deep",
+        "width": "24"
     },
     "savedProfiles": [
         {
