@@ -1,31 +1,18 @@
 {
     "lastUsed": {
-<<<<<<< Updated upstream
-        "blend": "art-viz-gallery.blend",
-        "depth": "0.50",
-        "frameType": "NielsenFloatingFrameBlackMetal",
-        "height": "18",
-        "image": "coast.PNG",
-        "openWhenFinished": false,
-=======
         "blend": "art-viz.blend",
         "depth": "0.10",
         "frameType": "ModernMattedFrameBlack",
         "height": "8",
         "image": "streak.jpg",
         "openWhenFinished": true,
->>>>>>> Stashed changes
         "output": "output.png",
         "outputHeight": "1024",
         "outputWidth": "1024",
         "renderDevice": "GPU",
         "renderer": "CYCLES",
         "wallColor": "Default",
-<<<<<<< Updated upstream
-        "width": "36"
-=======
         "width": "10"
->>>>>>> Stashed changes
     },
     "savedProfiles": [
         {
