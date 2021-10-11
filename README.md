@@ -281,14 +281,6 @@ The desired render device type. Options are `GPU` or `CPU`
 
 Optional. Defaults to `GPU`
 
-## 🎁 Qt Interface
-
-For convenience, I've added a script that will display a user interface for faster argument input and editing. If you would like, you can run the script `RenderArgsQt.py`. PySide6 **must** be installed.
-
-  - Install with `pip install pyside6`
-
-Run in the repository root directory with:
-
 ## Blender File (Environment)
 
 I've added a field to the top of the Qt called 'Blender File', which selects the blender file in which it will be running the render script and args. This essentially just updates the .blend file path in the render command.
@@ -308,6 +300,14 @@ Here are the current options:
 You can even use your own .blend files in art-viz by including the file in the root path of the repository and importing the necessary objects with `File>Append>art-viz-staircase.blend>Collections>art-viz`, which will bring the frames, camera, and canvas into the scene.
 
 >Note: You may need an object named "Wall" in the scene as well, with a material named "Wall" applied to that object. This will be fixed in future iterations.
+
+## 🎁 Qt Interface
+
+For convenience, I've added a script that will display a user interface for faster argument input and editing. If you would like, you can run the script `RenderArgsQt.py`. PySide6 **must** be installed.
+
+  - Install with `pip install pyside6`
+
+Run in the repository root directory with:
 
 ```bash
 python renderQt.py
